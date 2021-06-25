@@ -20,10 +20,14 @@ export default class App extends Component {
     return (
       <div>
         <SearchBar />      { /*  Chris */}
-        <ImageDisplay />    { /*  Cristian */}
-        <ProduictInfo />    { /*  Jose  */}
-        <AddToCart />     { /*  Charles  */}
+
       </div>
     )
   }
 }
+
+`
+        <ImageDisplay />    { /*  Cristian */}
+        <ProduictInfo />    { /*  Jose  */}
+        <AddToCart />     { /*  Charles  */}
+        `
