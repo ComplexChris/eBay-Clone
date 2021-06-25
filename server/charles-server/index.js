@@ -3,7 +3,7 @@ const db = require("./db/config");
 
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static("./public"));
 app.use(express.json());
 
 app.get("/api/cart", (req, res) => {
