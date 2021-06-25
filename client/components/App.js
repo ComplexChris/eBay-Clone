@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AddToCart from './Charles/AddToCart';
 
 export default class App extends Component {
   constructor(props) {
@@ -8,13 +9,17 @@ export default class App extends Component {
     this.state = {};
   }
 
+
+
   componentDidMount() {
-    fetch("/api/tweets")
+    fetch("/api/cart")
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
 
   render() {
-    return <div>My React MVP</div>;
+    return <div>
+      <AddToCart />
+    </div>;
   }
 }

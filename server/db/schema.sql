@@ -1,7 +1,21 @@
--- Create tables here.
-DROP TABLE IF EXISTS tweets;
 
-CREATE TABLE tweets (
-   id       SERIAL PRIMARY KEY NOT NULL,
-   message  TEXT NOT NULL
+
+-- Create tables here.
+DROP TABLE IF EXISTS cart;
+DROP TABLE IF EXISTS userInfo;
+DROP TABLE IF EXISTS item;
+
+CREATE TABLE cart (
+   userId  SERIAL PRIMARY KEY,
+   itemId  INTEGER
+);
+
+CREATE TABLE userInfo (
+   userId   SERIAL,
+   userName TEXT
+);
+
+CREATE TABLE item (
+   itemId   INTEGER,
+   itemName TEXT
 );

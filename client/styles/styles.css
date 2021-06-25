@@ -4,4 +4,72 @@
   padding: 0;
   font-size: 1rem;
   font-family: inherit;
+  
+}
+
+.ecommerceCard {
+  height:500px;
+  width:500px;
+  background-color:white;
+  height:207px;
+  width:382px;
+  display:flex;
+  justify-content: center;
+  align-content:center;
+  flex-wrap:wrap;
+  position:relative;
+}
+
+.buyItNowBtn {
+  height:40px;
+  width:262px;
+  background-color:#0053A0;
+  color:white;
+  font-weight:bold;
+  border:0px;
+  cursor:pointer;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:.9em;
+}
+
+.buyItNowBtn:hover, .addToCartBtn:hover {
+  background-color:#27009b;
+}
+
+.addToCartBtn {
+  height:40px;
+  width:262px;
+  background-color:#3498CA;
+  border:0px;
+  font-weight:bold;
+  color:white;
+  cursor:pointer;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:.9em;
+  margin:.5em 0em;
+}
+
+.addToWatchlistBtn {
+  height:40px;
+  width:262px;
+  background-color:white;
+  border: solid 1px #006EFC;
+  color: #006EFC;
+  cursor:pointer;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:.9em;
+}
+
+.addToWatchlistBtn:hover {
+  color:#27009b;
+  border: solid 1px #27009b;
+}
+
+.heartImg {
+ color:blue;
+ background-size:cover; 
+ position:absolute;
+ fill:blue;
+ bottom:2.9em;
+ left:7.75em;
 }
