@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Items from "./Items/Items"
 
 export default class App extends Component {
   constructor(props) {
@@ -8,13 +9,17 @@ export default class App extends Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    fetch("/api/tweets")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
+  // componentDidMount() {
+  //   fetch("/api/items")
+  //     .then((response) => response.json())
+  //     .then((data) => {(data)});
+  // }
 
   render() {
-    return <div>My React MVP</div>;
+    return  (<div>
+              My React MVP
+                <Items/>
+            </div>
+            )
   }
 }
