@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import SearchBar from './Search Bar/SearchBar'
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +17,13 @@ export default class App extends Component {
   }
 
   render() {
-    return <div>My React MVP</div>;
+    return (
+      <div>
+        <SearchBar />      { /*  Chris */}
+        <ImageDisplay />    { /*  Cristian */}
+        <ProduictInfo />    { /*  Jose  */}
+        <AddToCart />     { /*  Charles  */}
+      </div>
+    )
   }
 }
