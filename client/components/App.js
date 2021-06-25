@@ -1,20 +1,23 @@
 import React, { Component } from "react";
+import Images from './Display Items/Images';
 
-export default class App extends Component {
+
+class App extends Component {
   constructor(props) {
     super(props);
 
     // Initialize state.
-    this.state = {};
+  
   }
-
-  componentDidMount() {
-    fetch("/api/tweets")
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }
+ 
 
   render() {
-    return <div>My React MVP</div>;
+    return <div className='App'>  
+              <Images/>
+          </div>
+          
+       
   }
 }
+
+export default App;
