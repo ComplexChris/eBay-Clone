@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./db/config");
+const db = require("./config");
 
 const app = express();
 
@@ -22,7 +22,7 @@ app.get("/api/items/:id", (req, res) => {
     if (err) {
       res.status(404).send(err);
     } else {
-      res.json([data.rows]);
+      res.json([data.rows[0]]);
     }
   });
 });
