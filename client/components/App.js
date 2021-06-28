@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import SearchBar from './Search Bar/SearchBar'
+import Login from './Login/Login'
 
 export default class App extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+    return;
     fetch("/api/tweets")
       .then((response) => response.json())
       .then((data) => console.log(data));
@@ -19,6 +21,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
+        <Login />
         <SearchBar />      { /*  Chris */}
 
       </div>
