@@ -1,7 +1,8 @@
--- Create tables here.
-DROP TABLE IF EXISTS tweets;
+DROP TABLE IF EXISTS product CASCADE;
 
-CREATE TABLE tweets (
-   id       SERIAL PRIMARY KEY NOT NULL,
-   message  TEXT NOT NULL
-);
+CREATE TABLE product(
+id SERIAL PRIMARY KEY NOT NULL,
+name TEXT NOT NULL,
+image_url TEXT NOT NULL
+)
+
