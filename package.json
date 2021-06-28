@@ -1,7 +1,7 @@
 {
   "name": "react-mvp-template",
   "scripts": {
-    "backend": "nodemon server/index.js",
+    "backend": "nodemon server/Jose-server/index.js",
     "frontend": "webpack -d --watch",
     "start": "npm run backend & npm run frontend"
   },

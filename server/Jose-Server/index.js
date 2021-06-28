@@ -17,7 +17,6 @@ app.get("/api/items", (req, res) => {
 });
 
 app.get("/api/items/:id", (req, res) => {
-  console.log(req)
   db.query("SELECT * FROM items WHERE id=$1;", [req.params.id], (err, data) => {
     if (err) {
       res.status(404).send(err);
