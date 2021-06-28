@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentCart from './CurrentCart.js';
+import "./styles/styles.css";
 
  class AddToCart extends React.Component {
     constructor (props) {
