@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./db/config");
+const db = require("./config");
 
 const app = express();
 
@@ -19,12 +19,11 @@ app.get("/api/items", (req, res) => {
 });
 
 app.get("/api/items/:id", (req, res) => {
-  console.log(req)
   db.query("SELECT * FROM items WHERE id=$1;", [req.params.id], (err, data) => {
     if (err) {
       res.status(404).send(err);
     } else {
-      res.json([data.rows]);
+      res.json([data.rows[0]]);
     }
   });
 });

@@ -21,6 +21,7 @@ body {
   font-size: 10px;
   line-height: normal;
   color: #333;
+  background-color: springgreen;
 }
 .itemPrice {
   text-decoration: none;
