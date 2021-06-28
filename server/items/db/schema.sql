@@ -1,7 +1,7 @@
 CREATE TABLE items (
-	id INT,
-	name VARCHAR(50),
+	id					INT,
+	name 				VARCHAR(50),
 	description TEXT,
-	company VARCHAR(50),
-	price VARCHAR(50)
+	company 		VARCHAR(50),
+	price 			VARCHAR(50)
 );
