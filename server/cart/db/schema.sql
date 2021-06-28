@@ -1,5 +1,3 @@
-
-
 -- Create tables here.
 DROP TABLE IF EXISTS cart;
 DROP TABLE IF EXISTS userInfo;

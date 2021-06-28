@@ -17,9 +17,9 @@ app.get("/api/items", (req, res) => {
 });
 
 app.get("/api/items/:id", (req, res) => {
-  console.log(req)
   db.query("SELECT * FROM items WHERE id=$1;", [req.params.id], (err, data) => {
     if (err) {
+      console.log("err", err);
       res.status(404).send(err);
     } else {
       res.json([data.rows]);
@@ -27,6 +27,6 @@ app.get("/api/items/:id", (req, res) => {
   });
 });
 
-app.listen(4000, () => {
-  console.log("listening on Port 4000");
+app.listen(3001, () => {
+  console.log("listening on Port 3001");
 });
