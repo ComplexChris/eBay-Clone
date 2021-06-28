@@ -12,6 +12,11 @@
   background-color: rgba(0,0,0,0.4);
   position: absolute;
   z-index: 10;
+
+}
+
+.practice {
+  background-color: red;
 }
 
 .ecommerceCard {
