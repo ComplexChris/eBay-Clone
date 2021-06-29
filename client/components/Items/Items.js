@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-const version = '29June'
+const version = '29June 2.2'
 class Items extends Component {
   constructor(props) {
     super(props);
