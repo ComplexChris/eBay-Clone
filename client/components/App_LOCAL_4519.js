@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import AddToCart from "./Charles/AddToCart";
-import Items from "./Items/Items";
 
 import SearchBar from './Search Bar/SearchBar'
 import Login from './Login/Login'
@@ -14,7 +12,8 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/cart")
+    return;
+    fetch("/api/tweets")
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
@@ -22,10 +21,11 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <AddToCart />
-        <Items />
+        <Login />
+        <SearchBar />      { /*  Chris */}
+
       </div>
-    );
+    )
   }
 }
 

@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import AddToCart from "./Charles/AddToCart";
 import Items from "./Items/Items";
 
-import SearchBar from './Search Bar/SearchBar'
-import Login from './Login/Login'
-
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -28,9 +25,3 @@ export default class App extends Component {
     );
   }
 }
-
-`
-        <ImageDisplay />    { /*  Cristian */}
-        <ProduictInfo />    { /*  Jose  */}
-        <AddToCart />     { /*  Charles  */}
-        `

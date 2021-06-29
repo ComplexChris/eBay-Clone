@@ -2,6 +2,35 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
-  font-family: inherit;
+}
+body {
+  background-color: silver;
+}
+.itemComponents {
+  background-color: white;
+}
+.itemDescHeader {
+  display: inline;
+  font-family: Skin-market-sans;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: normal;
+  color: #333;
+}
+.itemPrice {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: Skin-market-sans !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: rgba(17, 24, 32, 0.87) !important;
+  border: 0;
+  white-space: normal;
+  text-align: left;
 }

@@ -14,7 +14,12 @@ export default class App extends Component {
   }
 
   componentDidMount() {
+<<<<<<< HEAD
+    return;
+    fetch("/api/tweets")
+=======
     fetch("/api/cart")
+>>>>>>> main
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
@@ -22,10 +27,18 @@ export default class App extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD
+        <Login />
+        <SearchBar />      { /*  Chris */}
+
+      </div>
+    )
+=======
         <AddToCart />
         <Items />
       </div>
     );
+>>>>>>> main
   }
 }
 
