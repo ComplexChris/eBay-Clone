@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./cristian-server/config");
+const db = require("./db/config");
 
 const app = express();
 

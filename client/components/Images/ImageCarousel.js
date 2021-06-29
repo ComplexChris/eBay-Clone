@@ -1,5 +1,5 @@
 import React, { Component , SetStateAction } from 'react';
-// import ImageGallery from './ImageGallery';
+import "./styles/styles.css";
 
 
 
@@ -26,8 +26,8 @@ class ImageCarousel extends Component {
                             style={{border: this.state.images === index ? '4px solid black ': ''}}
                             key={index} 
                             src={index} 
-                            alt='bose' 
-                            onClick={() => this.setState.images}/>
+                            alt='main-image' 
+                            onClick={() => this.setState.images[index]}/>
                         ))}
                     </div>
     

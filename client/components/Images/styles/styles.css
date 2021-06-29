@@ -53,23 +53,30 @@ img {
   margin: auto;
   width: 100%;
   max-width: 500px;
+ 
 }
 .container .selected {
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  border: 4px solid white;
+  border: 4px transparent;
+  padding: 1rem;
+ 
 }
-.container .img-container {
-  width: 100px;
+div .img-container {
+
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100px;
   padding: 40px 0 0 0;
 }
 
-.container .img-container img {
+.img-container img {
   width: 100px;
   height: 100px;
   margin: 5px 0;
+  border: 10px solid whitesmoke;
 }
+ 
+  
