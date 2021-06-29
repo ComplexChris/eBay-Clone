@@ -33,6 +33,6 @@ app.delete('/api/cart/:itemId', (req, res) => {
   })
 })
 
-app.listen(4000, () => {
-  console.log("listening on Port 4000");
+app.listen(4009, () => {
+  console.log("listening on Port 4009");
 });

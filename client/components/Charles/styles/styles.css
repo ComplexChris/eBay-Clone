@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   font-family: inherit;
 }
 
@@ -20,7 +19,7 @@
   background-color:white;
   height: 207px;
   width: 382px;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
