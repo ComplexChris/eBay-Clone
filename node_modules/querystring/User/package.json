@@ -1,0 +1,16 @@
+{
+  "name": "user",
+  "version": "0.0.0",
+  "private": "true",
+  "scripts": {
+    "start": "echo \"Define start script!\"",
+    "setup-db": "psql fec -f user_db_schema_seed.sql"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
