@@ -1,0 +1,45 @@
+.itemComponents {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 23em;
+  max-width: 40em;
+}
+.itemDescHeader {
+  display: inline;
+  font-family: Skin-market-sans;
+  margin: 0;
+  padding: 1.1rem;
+  border: 0;
+  font-weight: bold;
+  font-size: .80rem;
+  line-height: normal;
+  color: #333;
+}
+.itemPrice {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: Skin-market-sans !important;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: rgba(17, 24, 32, 0.87) !important;
+  border: 0;
+  white-space: normal;
+  text-align: left;
+}
+
+.itemDivPadding {
+  padding: 1.5rem
+}
+
+.itemHr {
+  width: 37rem;
+  margin: auto;
+}
+.itemH1 {
+  padding: 1.5rem;
+}

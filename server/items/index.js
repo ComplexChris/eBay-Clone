@@ -22,7 +22,7 @@ app.get("/api/items/:id", (req, res) => {
       console.log("err", err);
       res.status(404).send(err);
     } else {
-      res.json([data.rows]);
+      res.json([data.rows[0]]);
     }
   });
 });
