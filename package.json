@@ -3,9 +3,16 @@
   "scripts": {
     "backend": "nodemon server.js",
     "frontend": "webpack -d --watch",
+<<<<<<< HEAD
+    "start": "npm run backend & npm run frontend",
+    "setup-db": "npm run setup-db --workspaces"
+||||||| 6c4d1ce
+    "start": "npm run backend & npm run frontend"
+=======
     "start:app": "npm run backend & npm run frontend",
     "start": "concurrently \"npm run start:app\" \"npm run start --workspace=cart\" \"npm run start --workspace=items\" \"npm run start --workspace=search\" \"npm run start --workspace=user\"",
     "setup-db": "npm run setup-db --workspaces"
+>>>>>>> main
   },
   "license": "ISC",
   "workspaces": [
