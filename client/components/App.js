@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Images from "./Display Items/Images";
-import ImageCarousel from "./Display Items/ImageCarousel";
+import Images from "./Cristian/Images";
+import ImageCarousel from "./Cristian/ImageCarousel";
 import AddToCart from "./Charles/AddToCart";
 import Items from "./Items/Items";
 import SearchBar from "./Search Bar/SearchBar";
@@ -18,8 +18,8 @@ class App extends Component {
         <SearchBar />
         <AddToCart />
         <Items />
-        <Images images={this.props.images} />
-        <ImageCarousel images={this.props.Carousel()} />
+        <Images/>
+        <ImageCarousel  />
       </div>
     );
   }

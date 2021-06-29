@@ -1,13 +1,11 @@
 const express = require("express");
-const db = require("./db/config");
+const db = require("./cristian-server/config");
 
 const app = express();
 
 app.use(express.static("public"));
 app.use(express.json());
 
-<<<<<<< HEAD
-=======
 app.get("/api/items", (req, res) => {
   db.query("SELECT * FROM items", (err, data) => {
     if (err) {
@@ -28,7 +26,6 @@ app.get("/api/items/:id", (req, res) => {
     }
   });
 });
->>>>>>> main
 
 
 app.get('/product/:id', (req,res) => {
