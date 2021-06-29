@@ -26,23 +26,6 @@ app.get("/api/items/:id", (req, res) => {
     }
   });
 });
-<<<<<<< HEAD:server/index.js
-
-
-app.get('/product/:id', (req,res) => {
-    const {id} = req.params;
-    db.query('SELECT name,image_url FROM product WHERE id=$1;',[id],(err,data) => {
-        if(err){
-            res.status(404).send(err)
-          
-        }else{
-            res.send(data.rows);
-        }
-    })
-});
-
-=======
->>>>>>> main:server/items/index.js
 
 app.listen(3001, () => {
   console.log("listening on Port 3001");
