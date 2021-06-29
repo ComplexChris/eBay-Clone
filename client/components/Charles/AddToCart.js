@@ -19,8 +19,7 @@ import "./styles/styles.css";
 
     render () {
         return (
-            <div>
-                
+            <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart 
                 currentCart={this.clickEvent}
                 />}
