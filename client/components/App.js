@@ -1,16 +1,10 @@
 import React, { Component } from "react";
+import Images from "./Images/Images";
 import AddToCart from "./Charles/AddToCart";
 import Items from "./Items/Items";
 import SearchBar from "./Search Bar/SearchBar";
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-
-    // Initialize state.
-    this.state = {};
-  }
-
+class App extends Component {
   componentDidMount() {
     fetch("/api/cart")
       .then((response) => response.json())
@@ -23,7 +17,10 @@ export default class App extends Component {
         <SearchBar />
         <AddToCart />
         <Items />
+        <Images images={this.props.images} />
       </div>
     );
   }
 }
+
+export default App;
