@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
+        <AddToCart />
         <Items />
         <Images images={this.props.images} />
       </div>
