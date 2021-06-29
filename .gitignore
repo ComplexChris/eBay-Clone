@@ -4,3 +4,4 @@
 .gitignore
 *webpack*
 *babel*
+client/components/App.js
