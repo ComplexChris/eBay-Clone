@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ImageGallery from './Display Items/ImageGallery';
 
 export class ImageCarousel extends Component {
-    const {selectedImage, setSelectedImage} = useState(ImageGallery[0]);
+    // const {selectedImage, setSelectedImage} = useState(ImageGallery[0]);
     render() {
         return (
             <div className='gallery'>
