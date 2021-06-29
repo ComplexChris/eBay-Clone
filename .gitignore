@@ -4,3 +4,4 @@
 .gitignore
 *webpack*
 *babel*
+**/*.icloud
