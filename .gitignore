@@ -1,3 +1,6 @@
 /node_modules/
-/public/bundle.js
+*bundle.js*
 .DS_Store
+.gitignore
+*webpack*
+*babel*
