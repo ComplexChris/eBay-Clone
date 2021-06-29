@@ -23,21 +23,19 @@ class Items extends Component {
                     <div className={'itemDescHeader'}>
                         <h1>{this.state.item.name}</h1>
                     </div>
-                    <hr/>
                     <div>
-                        <div style={{backgroundColor: 'lightBlue'}}>
-                            Condition: {this.state.item.description}<br/>
+                        <div className={'itemDivPadding'} style={{backgroundColor: 'lightBlue'}}>
+                            Condition: {this.state.item.description}
                         </div>
-                        <div style={{backgroundColor: 'lightGreen'}}>
-                            Model: {this.state.item.model}<br/>
+                        <div className={'itemDivPadding'} style={{backgroundColor: 'lightGreen'}}>
+                            Model: {this.state.item.model}
                         </div>
-                        <div style={{backgroundColor: 'lightYellow'}}>
+                        <div className={'itemDivPadding'} style={{backgroundColor: 'lightYellow'}}>
                             <label htmlFor='quantity'>Quantity:</label>
-                            <input type='text' defaultValue='1' size='4'/><br/>
+                            <input type='text' defaultValue='1' size='4'/>
                         </div>
-                        <hr/>
-                        <div style={{backgroundColor: 'lightBlue'}}>
-                            Price: <span className={'itemPrice'}>{'US  ' + this.state.item.price}</span><br/>
+                        <div className={'itemDivPadding'} style={{backgroundColor: 'lightBlue'}}>
+                            Price: <span className={'itemPrice'}>{'US  ' + this.state.item.price}</span>
                         </div>
                     </div>
                 </div>
