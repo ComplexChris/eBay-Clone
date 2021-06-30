@@ -10,7 +10,7 @@ class App extends Component {
     const user = window.localStorage.getItem("current_user")  || 69    // If no user is logged in, default to 1
     this.state = {
         current_item_id: 1,
-        current_item_obj = {},
+        current_item_obj: {quantity:1},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
 
     }
@@ -26,9 +26,9 @@ class App extends Component {
     this.setState( { current_item:item_id } )
   }
   componentDidMount() {
-    fetch(`/api/items/${this.state.displayItem}`)
+    fetch(`/api/items/${this.state.current_item_id}`)
           .then((response) => response.json())
-          .then((data) => {this.setState(() => ({item: data[0]}))});
+          .then((data) => {this.setState(() => ({current_item_obj: data[0]}))});
   }
 
   render() {
@@ -36,7 +36,7 @@ class App extends Component {
       <div>
         <SearchBar change_user={ this.setUserID.bind( this ) } />
         <AddToCart user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
-        <Items itemsSelected={this.state.current_item_obj} />
+        <Items itemsSelected={this.state} />
         <ImageCarousel item_id={this.state.current_item_id} />
       </div>
     );
