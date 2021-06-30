@@ -9,7 +9,8 @@ class App extends Component {
     super();
     const user = window.localStorage.getItem("current_user")  || 1    // If no user is logged in, default to 1
     this.state = {
-        current_item: 1,
+        current_item_id: 1,
+        current_item_obj = {},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
 
     }
@@ -34,9 +35,9 @@ class App extends Component {
     return (
       <div>
         <SearchBar change_user={ this.setUserID.bind( this ) } />
-        <AddToCart user_id={this.state.user_id} />
-        <Items current_item={this.state.current_item} />
-        <ImageCarousel current_item={this.state.current_item} />
+        <AddToCart user_id={this.state.user_id} itemsSelected={this.state.current_item_obj}  />
+        <Items itemsSelected={this.state.current_item_obj} />
+        <ImageCarousel item_id={this.state.current_item_id} />
       </div>
     );
   }
