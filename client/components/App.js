@@ -25,10 +25,10 @@ class App extends Component {
     // Updates new item (if user clicks different item, for example)
     this.setState( { current_item:item_id } )
   }
-
-
   componentDidMount() {
-    // Deleted Cart fetch.
+    fetch(`/api/items/${this.state.displayItem}`)
+          .then((response) => response.json())
+          .then((data) => {this.setState(() => ({item: data[0]}))});
   }
 
   render() {
