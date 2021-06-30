@@ -1,7 +1,8 @@
 /node_modules/
 **/bundle.js
 .DS_Store
-.gitignore
-*webpack*
-*babel*
 **/*.icloud
+./*.js*/
+README.md
+server.js
+**/*.json

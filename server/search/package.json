@@ -1,10 +1,10 @@
 {
   "name": "search",
-  "version": "0.0.0",
+  "version": "1.2.2",
   "private": "true",
   "scripts": {
-    "start": "echo \"Define start script!\"",
-    "setup-db": "psql fec -f search_history_db_schema.sql; psql fec -f search_history_db_seed.sql"
+    "start": "nodemon index.js",
+    "setup-db": "psql fec -f db/search_history_db_schema.sql; psql fec -f db/search_history_db_seed.sql"
   },
   "dependencies": {
     "express": "^4.17.1",
