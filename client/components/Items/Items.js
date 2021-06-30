@@ -1,53 +1,31 @@
 import React from "react";
-import { Component } from "react";
-const version = '29June 2.2'
-class Items extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      item: {},
-      displayItem: 4,
-    };
-  }
-  componentDidMount() {
-    fetch(`/api/items/${this.state.displayItem}`)
-      .then((response) => response.json())
-      .then((data) => {
-        this.setState(() => ({ item: data[0][0] }));
-      });
-  }
-  render() {
+import "./styles/styles.css";
+
+const Items = (props) => {
+    console.log('items', props.itemsSelected.current_item_obj.name)
     return (
-      <div className={"itemComponents"}>
-        <div className={"itemDescHeader"}>
-          <h1>{this.state.item.name}</h1>
-        </div>
-        <hr />
-        <div>
-          <div>
-            Condition: {this.state.item.description}
-            <br />
-          </div>
-          <div>
-            Model: awesome
-            <br />
-          </div>
-          <div>
-            <label htmlFor="quantity">Quantity:</label>
-            <input type="text" value="1" size="4" />
-            <br />
-          </div>
-          <hr />
-          <div>
-            Price:{" "}
-            <span className={"itemPrice"}>
-              {"US  " + this.state.item.price}
-            </span>
-            <br />
-          </div>
-        </div>
-      </div>
-    );
-  }
+                <div className={'itemComponents'}>
+                    <div className={'itemDescHeader'}>
+                        <h1 className={'itemH1'}>{props.itemsSelected.current_item_obj.name}</h1>
+                    </div>
+                    <hr className={'itemHr'}/>
+                    <div>
+                        <div className={'itemDivPadding'}>
+                            Condition: {props.itemsSelected.current_item_obj.description}
+                        </div>
+                        <div className={'itemDivPadding'}>
+                            Model: {props.itemsSelected.current_item_obj.model}
+                        </div>
+                        <div className={'itemDivPadding'}>
+                            <label htmlFor='quantity'>Quantity:</label>
+                            <input type='text' defaultValue='1' size='4'/>
+                        </div>
+                        <hr className={'itemHr'}/>
+                        <div className={'itemDivPadding'}>
+                            Price: <span className={'itemPrice'}>{'US  ' + props.itemsSelected.current_item_obj.price}</span>
+                        </div>
+                    </div>
+                </div>
+        )
 }
 export default Items;
