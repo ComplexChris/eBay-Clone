@@ -5,4 +5,4 @@
 ./*.js*/
 README.md
 server.js
-package.json
+**/*.json
