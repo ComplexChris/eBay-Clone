@@ -7,7 +7,7 @@ import SearchBar from "./Search Bar/SearchBar";
 class App extends Component {
   constructor(){
     super();
-    const user = window.localStorage.getItem("current_user")  || 1    // If no user is logged in, default to 1
+    const user = window.localStorage.getItem("current_user")  || 69    // If no user is logged in, default to 1
     this.state = {
         current_item_id: 1,
         current_item_obj = {},
@@ -35,7 +35,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar change_user={ this.setUserID.bind( this ) } />
-        <AddToCart user_id={this.state.user_id} itemsSelected={this.state.current_item_obj}  />
+        <AddToCart user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
         <Items itemsSelected={this.state.current_item_obj} />
         <ImageCarousel item_id={this.state.current_item_id} />
       </div>
