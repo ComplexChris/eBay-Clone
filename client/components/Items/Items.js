@@ -2,19 +2,19 @@ import React from "react";
 import "./styles/styles.css";
 
 const Items = (props) => {
-    console.log('items', props.itemsSelected.item.name)
+    console.log('items', props.itemsSelected.current_item_obj.name)
     return (
                 <div className={'itemComponents'}>
                     <div className={'itemDescHeader'}>
-                        <h1 className={'itemH1'}>{props.itemsSelected.item.name}</h1>
+                        <h1 className={'itemH1'}>{props.itemsSelected.current_item_obj.name}</h1>
                     </div>
                     <hr className={'itemHr'}/>
                     <div>
                         <div className={'itemDivPadding'}>
-                            Condition: {props.itemsSelected.item.description}
+                            Condition: {props.itemsSelected.current_item_obj.description}
                         </div>
                         <div className={'itemDivPadding'}>
-                            Model: {props.itemsSelected.item.model}
+                            Model: {props.itemsSelected.current_item_obj.model}
                         </div>
                         <div className={'itemDivPadding'}>
                             <label htmlFor='quantity'>Quantity:</label>
@@ -22,7 +22,7 @@ const Items = (props) => {
                         </div>
                         <hr className={'itemHr'}/>
                         <div className={'itemDivPadding'}>
-                            Price: <span className={'itemPrice'}>{'US  ' + props.itemsSelected.item.price}</span>
+                            Price: <span className={'itemPrice'}>{'US  ' + props.itemsSelected.current_item_obj.price}</span>
                         </div>
                     </div>
                 </div>
