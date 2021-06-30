@@ -17,7 +17,7 @@ class Items extends Component {
           .then((data) => {this.setState(() => ({item: data[0]}))});
       }
     render() {
-        console.log('state', this.state)
+        // console.log('state', this.state)
         return (
                 <div className={'itemComponents'}>
                     <div className={'itemDescHeader'}>

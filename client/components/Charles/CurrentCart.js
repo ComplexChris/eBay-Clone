@@ -7,8 +7,6 @@ class CurrentCart extends React.Component {
         this.state = {
             
         }
-
-        console.log(this.props.currentCart)
     }
     
     render () {

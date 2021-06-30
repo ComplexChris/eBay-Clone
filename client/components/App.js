@@ -6,7 +6,7 @@ import SearchBar from "./Search Bar/SearchBar";
 
 class App extends Component {
   componentDidMount() {
-    fetch("/api/cart")
+    fetch("/api/items/")
       .then((response) => response.json())
       .then((data) => console.log(data));
   }
