@@ -1,8 +1,11 @@
 import React, { Component } from "react";
+import "./root_style.css";
+
 import ImageCarousel from "./Images/ImageCarousel";
 import AddToCart from "./Charles/AddToCart";
 import Items from "./Items/Items";
 import SearchBar from "./Search Bar/SearchBar";
+import User from "./User/User";
 
 class App extends Component {
   constructor(){
@@ -34,10 +37,26 @@ class App extends Component {
   render() {
     return (
       <div>
-        <SearchBar change_user={ this.setUserID.bind( this ) } />
-        <AddToCart user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
-        <Items itemsSelected={this.state} />
-        <ImageCarousel item_id={this.state.current_item_id} />
+        <header>
+          <User user_id={this.state.user_id} />
+        </header>
+
+
+        <SearchBar change_user={ this.setUserID.bind( this ) }  user_id={this.state.user_id} />
+        <div className="content_wrapper">
+          <aside className="left-sidebar">LEFT SIDEBAR</aside>
+          <main>
+            <ImageCarousel item_id={this.state.current_item_id} />
+            <Items itemsSelected={this.state} />
+            <AddToCart quantity={this.state.current_item_obj } user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
+          </main>
+          <aside className="right-sidebar">RIGHT SIDEBAR</aside>
+        </div>
+
+
+
+        <footer>FOOTER</footer>
+
       </div>
     );
   }
