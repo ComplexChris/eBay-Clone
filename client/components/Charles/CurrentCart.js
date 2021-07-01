@@ -12,7 +12,7 @@ class CurrentCart extends React.Component {
     
     
     render () {
-        console.log("Current Cart", this.props.sizeOfCart)
+        
         return (
             <div className={'modal'}>
                 <div className={"currentCart"}>
@@ -28,11 +28,10 @@ class CurrentCart extends React.Component {
                         <div className={'itemAdded'}>
                         <div className={"overflowContainer"}>
 
-                            {console.log('gg we won:', this.props.cartItems)}
 
                             {this.props.cartItems.map((item)=>{
                                 return (
-                                <div className={"itemAddedWrapper"}>
+                                <div className={"itemAddedWrapper"} key={item.id}>
                                     <div className={"itemImg"}>
                                         <img src="placeholder.jpeg" height="75" width="75"></img>
                                     </div>
