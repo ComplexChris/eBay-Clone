@@ -7,21 +7,34 @@ import "./styles/styles.css";
         super(props);
 
         this.state = {
-            currentCart:false
+            currentCart:false,
+            cartItems: []
         }
 
         this.clickEvent = this.clickEvent.bind(this);
     }
 
     clickEvent () {
-        this.setState({currentCart:!this.state.currentCart});
+        this.setState({currentCart:!this.state.currentCart}); // toggles modal
+
+        if(this.state.currentCart === false) {
+            this.setState((state)=>{
+                return (
+                    {cartItems:state.cartItems.push(this.props.current_item_obj)},
+                    console.log('current items in cart: ',this.state.cartItems)
+                )
+            })
+        }
       }
 
     render () {
+        console.log('Gg we lost', this.props.current_item_obj)
         return (
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart 
                 currentCart={this.clickEvent}
+                cartItems={this.state.cartItems}
+                sizeOfCart={Object.values(this.state.cartItems).length}
                 />}
 
                 <div className={'ecommerceCard'}>

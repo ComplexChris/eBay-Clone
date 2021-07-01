@@ -7,33 +7,58 @@ class CurrentCart extends React.Component {
         this.state = {
             
         }
+        ;
     }
     
+    
     render () {
+        console.log("Current Cart", this.props.sizeOfCart)
         return (
             <div className={'modal'}>
                 <div className={"currentCart"}>
                     <div className={'currentCartTitleBar'}>
-                        1 item added to cart
-                        <img src="close.svg" className={'closeBtn'} onClick={this.props.currentCart}></img>
+                        {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""} added to cart 
+                        
+                        <img 
+                            src="close.svg" 
+                            className={'closeBtn'} 
+                            onClick={this.props.currentCart}>
+                        </img>
                     </div>
-                    <div className={'itemAdded'}>
-                    <div className={"itemImg"}>
-                        <img src='placeholder.jpeg' height="75px" width="75px"></img>
-                    </div>
-                        <div className={"itemSpecifics"}>
-                            <div className={"itemSpecificsTitle"}>
-                            Sun Joe Cordless Lawn Mower 28V Lithium-Ion | Battery Includ...
-                            </div>
-                            <div className={"itemSpecificsPrice"}>
-                            <h1>Price</h1>  <span>US $127.99</span>
-                            </div>
+                        <div className={'itemAdded'}>
+                        <div className={"overflowContainer"}>
+
+                            {console.log('gg we won:', this.props.cartItems)}
+
+                            {this.props.cartItems.map((item)=>{
+                                return (
+                                <div className={"itemAddedWrapper"}>
+                                    <div className={"itemImg"}>
+                                        <img src="placeholder.jpeg" height="75" width="75"></img>
+                                    </div>
+                                    <div className={"itemSpecifics"}>
+                                        <div className={"itemSpecificsTitle"}>{item.name}</div>
+                                        <div className={"itemSpecificsPrice"}>
+                                            <div className={"itemPriceText"}>Price</div>
+                                            <div className={"itemDollarAmt"}>US {item.price}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                )
+                            })}
+
+                            
+
+
                         </div>
+
                         <div className={'qualifyBox'}>
                             <h1>Spend $43.79 to qualify</h1>
                             <h3>Extra 20% off $65 or more. <a>Shop now</a></h3>
                         </div>
-                        <button className={"checkoutBtn"}>Checkout 1 item</button>
+                        <button className={"checkoutBtn"}>  
+                        Checkout {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""}
+                        </button>
                         <button className={"goToCartBtn"}>Go to cart</button>
                     </div>
                     <div className={"boughtTogether"}>
