@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS userInfo;
 DROP TABLE IF EXISTS item;
 
 CREATE TABLE cart (
-   userId  SERIAL PRIMARY KEY,
+   userId  INTEGER,
    itemId  INTEGER
 );
 
