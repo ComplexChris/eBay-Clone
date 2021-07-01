@@ -1,7 +1,7 @@
 -- Insert test data here.
-INSERT INTO cart (itemId) VALUES (34);
-INSERT INTO cart (itemId) VALUES (123);
-INSERT INTO cart (itemId) VALUES (564);
+INSERT INTO cart (userId, itemId) VALUES (34, 888);
+INSERT INTO cart (userId, itemId) VALUES (123, 999);
+INSERT INTO cart (userId, itemId) VALUES (564, 1000);
 
 INSERT INTO userInfo (userName) VALUES ('Jane Doe'); 
 INSERT INTO userInfo (userName) VALUES ('John Morris');

@@ -2,7 +2,6 @@ import React from "react";
 import "./styles/styles.css";
 
 const Items = (props) => {
-    console.log('items', props.itemsSelected.current_item_obj.name)
     return (
                 <div className={'itemComponents'}>
                     <div className={'itemDescHeader'}>

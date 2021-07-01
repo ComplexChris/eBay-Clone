@@ -19,6 +19,23 @@ app.get("/api/cart", (req, res) => {
   });
 });
 
+app.post('/api/cart/', (req,res)=>{
+  const cart = req.body;
+
+  db.query('INSERT INTO cart (userId, itemId) VALUES ($1, $2);', [cart.userId,
+  cart.itemId], (err,data)=>{
+      if(err) {
+        console.log(err);
+          res.append('Content-Type', 'plain/text');
+          res.status(400).send(`An error has occurred!`);
+      } else {
+          res.append('Content-Type', 'application/json');
+          res.status(200).send('Congrats your post request worked!');
+      }
+  });
+
+});
+
 app.delete("/api/cart/:itemId", (req, res) => {
   const { itemId } = req.params;
 
