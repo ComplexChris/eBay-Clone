@@ -5,7 +5,8 @@
     "frontend": "webpack -d --watch",
     "start:app": "npm run backend & npm run frontend",
     "start": "concurrently \"npm run start:app\" \"npm run start --workspace=cart\" \"npm run start --workspace=items\" \"npm run start --workspace=search\" \"npm run start --workspace=user\"  ",
-    "setup-db": "npm run setup-db --workspaces"
+    "setup-db": "npm run setup-db --workspaces",
+    "start-wsl": "DATABASE_URL=postgres://toor:password@localhost:5432/fec npm run start"
   },
   "license": "ISC",
   "workspaces": [

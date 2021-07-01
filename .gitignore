@@ -2,7 +2,7 @@
 **/bundle.js
 .DS_Store
 **/*.icloud
-./*.js*/
+./*.js*
 README.md
 server.js
-**/*.json
+package-lock.json
