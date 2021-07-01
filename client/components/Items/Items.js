@@ -6,7 +6,7 @@ const Items = (props) => {
     return (
                 <div className={'itemComponents'}>
                     <div className={'itemDescHeader'}>
-                        <h1 className={'itemH1'}>{props.itemsSelected.item.name}</h1>
+                        <h2 className={'itemH2'}>{props.itemsSelected.item.name}</h2>
                     </div>
                     <hr className={'itemHr'}/>
                     <div>

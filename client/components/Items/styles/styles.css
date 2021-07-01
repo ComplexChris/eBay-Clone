@@ -1,21 +1,21 @@
 .itemComponents {
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   min-width: 23em;
   max-width: 40em;
+  padding-right: 35px;
+  width: 58%;
 }
 .itemDescHeader {
   display: inline;
   font-family: Skin-market-sans;
   margin: 0;
-  padding: 1.1rem;
+  padding: 1.25rem;
   border: 0;
   font-weight: bold;
   font-size: .80rem;
-  line-height: normal;
+  line-height: 129%;
   color: #333;
+  min-height: 28px;
 }
 .itemPrice {
   text-decoration: none;
@@ -40,6 +40,8 @@
   width: 37rem;
   margin: auto;
 }
-.itemH1 {
+.itemH2 {
   padding: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
