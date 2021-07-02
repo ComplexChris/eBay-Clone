@@ -4,9 +4,11 @@
   display: flex;
 }
 
-img {
+.selectedImg{
   display: block;
   cursor: pointer;
+  height :300px;
+  width:300px
 }
 
 .img-container {
@@ -32,12 +34,3 @@ img {
   width: 60%;
 }
 
-.selectedImg {
-  width: 300px;
-  height: 300px;
-  margin: 2em auto;
-  padding: 1em;
-  border: solid 1px rgb(220, 220, 220);
-}
- 
-  
