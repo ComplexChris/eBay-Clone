@@ -36,7 +36,7 @@ class ImageCarousel extends Component {
                             onMouseEnter={this.upDateSelectedImage.bind(this)}/>
                             ))}
                         </div>
-                    <img src={this.state.images[this.state.selected].image_url} alt='selected' className='selected'/>
+                    <img src={this.state.images[this.state.selected].image_url} alt='selected' className='selectedImg'/>
                 </div>
 
             )
