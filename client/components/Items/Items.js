@@ -5,10 +5,10 @@ const Items = (props) => {
     return (
                 <div className={'itemComponents'}>
                     <div className={'itemDescHeader'}>
-                        <h1 className={'itemH1'}>{props.itemsSelected.current_item_obj.name}</h1>
+                        {/* <h1 className={'itemH1'}>{props.itemsSelected.current_item_obj.name}</h1> */}
+                        <h1>{props.itemsSelected.current_item_obj.name}</h1>
                     </div>
-                    <hr className={'itemHr'}/>
-                    <div>
+                    {/* <hr className={'itemHr'}/> */}
                         <div className={'itemDivPadding'}>
                             Condition: {props.itemsSelected.current_item_obj.description}
                         </div>
@@ -19,11 +19,10 @@ const Items = (props) => {
                             <label htmlFor='quantity'>Quantity:</label>
                             <input type='text' defaultValue='1' size='4'/>
                         </div>
-                        <hr className={'itemHr'}/>
+                        {/* <hr className={'itemHr'}/> */}
                         <div className={'itemDivPadding'}>
                             Price: <span className={'itemPrice'}>{'US  ' + props.itemsSelected.current_item_obj.price}</span>
                         </div>
-                    </div>
                 </div>
         )
 }

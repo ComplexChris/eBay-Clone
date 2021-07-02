@@ -1,46 +1,6 @@
-/* Reset styles to normalize behavior across browsers */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: silver;
-}
-.itemComponents {
-  background-color: white;
-}
-.itemDescHeader {
-  display: inline;
-  font-family: Skin-market-sans;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-weight: bold;
-  font-size: 10px;
-  line-height: normal;
-  color: #333;
-}
-.itemPrice {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 24px;
-  font-family: Skin-market-sans !important;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  color: rgba(17, 24, 32, 0.87) !important;
-  border: 0;
-  white-space: normal;
-  text-align: left;
-}
-
 .App {
   width: 100%;
   min-height: 100vh;
-  background: #1c1e27;
   display: flex;
 }
 
@@ -49,34 +9,35 @@ img {
   cursor: pointer;
 }
 
-.container {
-  margin: auto;
-  width: 100%;
-  max-width: 500px;
- 
-}
-.container .selected {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  border: 4px transparent;
-  padding: 1rem;
- 
-}
-div .img-container {
-
+.img-container {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  width: 100px;
-  padding: 40px 0 0 0;
+  align-items: center;
+  width: 90%;
+  height: 150px;
+  margin: 1em auto;
+  overflow-x: auto;
+  padding: 1em;
 }
 
 .img-container img {
-  width: 100px;
-  height: 100px;
-  margin: 5px 0;
-  border: 10px solid whitesmoke;
+  height: 80px;
+  width: 80px;
+  border: solid 1px rgb(220, 220, 220);
+  padding: 1em;
+}
+
+.gallery {
+  height: 33em;
+  width: 60%;
+}
+
+.selectedImg {
+  width: 300px;
+  height: 300px;
+  margin: 2em auto;
+  padding: 1em;
+  border: solid 1px rgb(220, 220, 220);
 }
  
   

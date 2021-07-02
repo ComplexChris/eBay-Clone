@@ -44,18 +44,19 @@ class App extends Component {
 
         <SearchBar change_user={ this.setUserID.bind( this ) }  user_id={this.state.user_id} />
         <div className="content_wrapper">
-          <aside className="left-sidebar">LEFT SIDEBAR</aside>
+        
+          <aside className="left-sidebar"></aside>
           <main>
             <ImageCarousel item_id={this.state.current_item_id} />
             <Items itemsSelected={this.state} />
             <AddToCart quantity={this.state.current_item_obj } user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
           </main>
-          <aside className="right-sidebar">RIGHT SIDEBAR</aside>
+          <aside className="right-sidebar"></aside>
         </div>
 
 
 
-        <footer>FOOTER</footer>
+        <footer></footer>
 
       </div>
     );
