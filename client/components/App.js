@@ -12,7 +12,7 @@ class App extends Component {
     super();
     const user = window.localStorage.getItem("current_user")  || 69    // If no user is logged in, default to 1
     this.state = {
-        current_item_id: 2,
+        current_item_id: 1,
         current_item_obj: {quantity:1},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
 
