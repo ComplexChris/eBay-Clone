@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
+// Primary Search Bar component, developed by Chris Nguyen
+const version = "1.5.5";
 
 export default class SearchBar extends Component {
     constructor(props){
@@ -21,8 +23,8 @@ export default class SearchBar extends Component {
         fetch( '/api/search/history' )
             .then((response) => response.json())
             .then((data) => {
-                //console.log("DATA: ", data)
-                this.setState({history:data[0] })
+                console.log("DATA: ", data)
+                if(!data) this.setState({ history: data[0] })
             } );
     }
 
@@ -33,9 +35,11 @@ export default class SearchBar extends Component {
     updateCategory(e){
         console.log("Submitted: ", e.target.value)
         this.setState({category:e.target.value})
+        e.preventDefault()
     }
     submitSearch(e){
         this.setState({ass:true})
+        e.preventDefault()
     }
 
     render(){
@@ -44,7 +48,7 @@ export default class SearchBar extends Component {
             <div className={'search_container'} >
                 <form className={"search_form"} onSubmit={this.submitSearch.bind(this) }>
                     <label htmlFor="search_box" className={"input_fields"}>
-                        <input  className='input_box' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1" required/>
+                        <input  className='input_box searchBox' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1" required/>
                         <datalist id="history_options">
                             {this.state.history.map( (searched, i) => <option key={`${searched.id}${i}`}> {searched.search_query} </option> ) }
                         </datalist>
