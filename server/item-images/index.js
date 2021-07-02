@@ -6,16 +6,16 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json());
 
-app.get("/product/:id", (req, res) => {
+app.get("/:id", (req, res) => {
   const { id } = req.params;
   db.query(
-    "SELECT name,image_url FROM product WHERE id=$1;",
+    "SELECT image_url FROM item_images WHERE id=$1;",
     [id],
     (err, data) => {
       if (err) {
         res.status(404).send(err);
       } else {
-        res.send(data.rows);
+        console.log(data);
       }
     }
   );
