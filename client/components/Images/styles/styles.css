@@ -13,7 +13,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 150px;
   margin: 1em auto;
   overflow-x: auto;
@@ -24,7 +24,8 @@ img {
   height: 80px;
   width: 80px;
   border: solid 1px rgb(220, 220, 220);
-  padding: 1em;
+  padding: .5em;
+  margin: .5em
 }
 
 .gallery {
@@ -33,7 +34,7 @@ img {
 }
 
 .selectedImg {
-  width: 300px;
+  width: 250px;
   height: 300px;
   margin: 2em auto;
   padding: 1em;
