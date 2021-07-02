@@ -15,6 +15,7 @@ app.use(
       "/items": "http://localhost:3001",
       "/search": "http://localhost:3002",
       "/users": "http://localhost:3003",
+      "/images": "http://localhost:3004",
     },
   })
 );

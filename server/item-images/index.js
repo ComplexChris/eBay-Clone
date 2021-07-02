@@ -6,21 +6,22 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.json());
 
-app.get("/:id", (req, res) => {
+app.get("/api/images/:id", (req, res) => {
   const { id } = req.params;
   db.query(
-    "SELECT image_url FROM item_images WHERE id=$1;",
+    "SELECT * FROM item_images WHERE item_id=$1;",
     [id],
     (err, data) => {
       if (err) {
         res.status(404).send(err);
+        console.log('nope')
       } else {
-        console.log(data);
+        res.json(data.rows)
       }
     }
   );
 });
 
-app.listen(3001, () => {
-  console.log("listening on Port 3001");
+app.listen(3004, () => {
+  console.log("listening on Port 3004");
 });

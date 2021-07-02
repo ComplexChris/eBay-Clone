@@ -1,6 +1,6 @@
 INSERT INTO item_images(item_id,image_url)
 VALUES
-(1,'https://ebaybaybay-item-images.s3.amazonaws.com/7updiet'),
+(1,'https://ebaybaybay-item-images.s3.amazonaws.com/7updiet.jpg'),
 (1,'https://ebaybaybay-item-images.s3.amazonaws.com/7updiet-1.jpg'),
 (1,'https://ebaybaybay-item-images.s3.amazonaws.com/7updiet-2.jpg'),
 (1,'https://ebaybaybay-item-images.s3.amazonaws.com/7updiet-3.jpg'),
