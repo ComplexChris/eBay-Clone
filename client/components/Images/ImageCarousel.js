@@ -19,7 +19,7 @@ class ImageCarousel extends Component {
         return (
             <div className='gallery'>
                 <div className='container'>
-                    <img src={this.state.images[0]} alt='selected' className='selected'/>
+                    <img src={this.state.images[0]} className={'selectedImg'}/>
                     <div className='img-container'>
                         {this.state.images.map((index) => (
                             <img 
@@ -30,7 +30,6 @@ class ImageCarousel extends Component {
                             onClick={() => this.setState.images[index]}/>
                         ))}
                     </div>
-    
                 </div>
             </div>
         )
