@@ -1,0 +1,24 @@
+ ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+
+cd /var/www/html
+
+$ sudo -u postgres psql fec
+add user fec;
+
+
+sudo vim /etc/httpd/conf/httpd.conf
+
+sudo systemctl status httpd
+
+
+sudo tail -f /var/log/httpd/access_log
+
+
+pm2 start "npm run start-wsl"
+pm2 save
+pm2 startup
+ pm2 restart default
+
+http get localhost:4000/api/search/history
+
+netstat -npl

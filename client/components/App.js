@@ -38,11 +38,11 @@ class App extends Component {
     return (
       <div>
         <header>
-          <User user_id={this.state.user_id} />
+          <User change_user={ this.setUserID.bind( this ) } user_id={this.state.user_id} />
         </header>
 
 
-        <SearchBar change_user={ this.setUserID.bind( this ) }  user_id={this.state.user_id} />
+        <SearchBar  user_id={this.state.user_id} />
         <div className="content_wrapper">
           <aside className="left-sidebar">LEFT SIDEBAR</aside>
           <main>

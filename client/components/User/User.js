@@ -16,6 +16,7 @@ export default class User extends Component {
     loginCallBack(e){
         alert("Logging you in...")
         setTimeout( ()=>alert("Success. Welcome in!"), 2000)
+        this.state.change_user()
     }
 
     registerCallBack(e){
@@ -31,9 +32,9 @@ export default class User extends Component {
         return (
             <span>
                 Hi!
-                <a href="#" onClick = {this.loginCallBack.bind(this) }>&ensp; Sign In &ensp; </a>
+                <a href="#" onClick = {this.state.change_user.bind(this, 1) }>&ensp; Sign In &ensp; </a>
                 or
-                <a href="#" onClick = {this.registerCallBack.bind(this) }>&ensp; Register &emsp; </a>
+                <a href="#" onClick = {this.state.change_user.bind(this, 1) }>&ensp; Register &emsp; </a>
             </span>
         )
     }
@@ -42,6 +43,7 @@ export default class User extends Component {
         return (
             <span>
                 <a href="#" onClick = {this.getUserPage.bind(this)}>&ensp; Welcome back! &ensp; </a>
+                <a href="#" onClick = {this.state.change_user.bind(this, null) }>&ensp; Signout &emsp; </a>
             </span>
 
         )

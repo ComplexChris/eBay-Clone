@@ -31,7 +31,7 @@ import "./styles/styles.css";
         console.log('Gg we lost', this.props.current_item_obj)
         return (
             <div className={"cartContainer"}>
-                {this.state.currentCart && <CurrentCart 
+                {this.state.currentCart && <CurrentCart
                 currentCart={this.clickEvent}
                 cartItems={this.state.cartItems}
                 sizeOfCart={Object.values(this.state.cartItems).length}
@@ -41,7 +41,7 @@ import "./styles/styles.css";
                     <button className={'buyItNowBtn'}>Buy It Now</button>
                     <button className={'addToCartBtn'} onClick={this.clickEvent}>Add to cart</button>
                     <button className={'addToWatchlistBtn'}>Add to Watchlist</button>
-                    <div className={'heartImg'}> <img src='heart.svg' height='12px' width='12px'></img></div> 
+                    <div className={'heartImg'}> <img src='heart.svg' height='12px' width='12px'></img></div>
                 </div>
             </div>
         );

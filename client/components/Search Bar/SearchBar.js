@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import "./styles/search_style.css";
 
 // Primary Search Bar component, developed by Chris Nguyen
 const version = "1.5.5";
@@ -48,7 +49,7 @@ export default class SearchBar extends Component {
             <div className={'search_container'} >
                 <form className={"search_form"} onSubmit={this.submitSearch.bind(this) }>
                     <label htmlFor="search_box" className={"input_fields"}>
-                        <input  className='input_box' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1" required/>
+                        <input  className='input_box' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="false" size="30" minLength="1" required/>
                         <datalist id="history_options">
                             {this.state.history.map( (searched, i) => <option key={`${searched.id}${i}`}> {searched.search_query} </option> ) }
                         </datalist>
