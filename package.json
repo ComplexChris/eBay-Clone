@@ -4,7 +4,7 @@
     "backend": "nodemon server.js --watch server.js",
     "frontend": "webpack -d --watch",
     "start:app": "npm run backend & npm run frontend",
-    "start": "concurrently \"npm run start:app\" \"npm run start --workspace=cart\" \"npm run start --workspace=items\" \"npm run start --workspace=search\" \"npm run start --workspace=user\"  ",
+    "start": "concurrently \"npm run start:app\" \"npm run start --workspace=cart\" \"npm run start --workspace=items\" \"npm run start --workspace=search\" \"npm run start --workspace=user\" \"npm run start --workspace=item-images\" ",
     "setup-db": "npm run setup-db --workspaces",
     "start-wsl": "DATABASE_URL=postgres://toor:password@localhost:5432/fec npm run start"
   },

@@ -12,7 +12,26 @@ import "./styles/styles.css";
         }
 
         this.clickEvent = this.clickEvent.bind(this);
+            
     }
+
+    componentDidMount () {
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({cartItems:this.state.cartItems})
+            }   
+
+        fetch("/api/cart/", requestOptions)
+              .then((response) => response.json())
+              .then((data) => {
+                console.log('heres what i would add:', data);
+              });
+    }
+
+    
 
     clickEvent () {
         this.setState({currentCart:!this.state.currentCart}); // toggles modal
@@ -24,11 +43,14 @@ import "./styles/styles.css";
                     console.log('current items in cart: ',this.state.cartItems)
                 )
             })
+
+            
         }
+
+        
       }
 
     render () {
-        console.log('Gg we lost', this.props.current_item_obj)
         return (
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart
