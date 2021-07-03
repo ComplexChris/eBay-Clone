@@ -2,38 +2,61 @@ import React from 'react';
 import CurrentCart from './CurrentCart.js';
 import "./styles/styles.css";
 
+let previousCart = null;
+
  class AddToCart extends React.Component {
     constructor (props) {
         super(props);
 
         this.state = {
             currentCart:false,
-            cartItems: []
+            cartItems: [],
+            cartAmt: 0
         }
 
         this.clickEvent = this.clickEvent.bind(this);
-            
+        
     }
 
-    componentDidMount () {
+    
+
+    sendRequest () {
         const requestOptions = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({cartItems:this.state.cartItems})
+            body: JSON.stringify({itemId: this.props.current_item_obj.id, userId: this.props.user_id})
             }   
 
         fetch("/api/cart/", requestOptions)
               .then((response) => response.json())
               .then((data) => {
-                console.log('heres what i would add:', data);
               });
+    }
+
+    componentDidMount () {
+
+        fetch(`/api/cart/${this.props.user_id}`)
+              .then((response) => response.json())
+              .then((data) => {
+                  console.log(`get data by id:${this.props.user_id}`, data);
+
+             return Promise.all(
+                  data.map((cartItem)=>{
+                    return fetch(`/api/items/${cartItem.itemid}`)
+                        .then((response) => response.json())
+                        .then((data)=> data[0])
+                    })
+              )
+
+        }).then((itemInfo)=> this.setState({cartItems: itemInfo}));
     }
 
     
 
     clickEvent () {
+
         this.setState({currentCart:!this.state.currentCart}); // toggles modal
 
         if(this.state.currentCart === false) {
@@ -44,14 +67,16 @@ import "./styles/styles.css";
                 )
             })
 
-            
+            this.sendRequest();
         }
-
+        
         
       }
 
     render () {
+        console.log('check it out:' , this.state.cartItems)
         return (
+            
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart 
                 currentCart={this.clickEvent}
