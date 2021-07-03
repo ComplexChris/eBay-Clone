@@ -46,9 +46,16 @@ export default class SearchBar extends Component {
         const options = ["All Categories", "Electronics", "Furniture", "Whatever"]
         return (
             <div className={'search_container'} >
+                
                 <form className={"search_form"} onSubmit={this.submitSearch.bind(this) }>
+                    <div className={"ebayLogo"}>
+                        <img src="ebay.png" height="47px" width="130px"></img>
+                    </div>
+                
                     <label htmlFor="search_box" className={"input_fields"}>
+                    
                         <input  className='input_box searchBox' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1" required/>
+                        
                         <datalist id="history_options">
                             {this.state.history.map( (searched, i) => <option key={`${searched.id}${i}`}> {searched.search_query} </option> ) }
                         </datalist>

@@ -27,7 +27,8 @@
   width: 80px;
   border: solid 1px rgb(220, 220, 220);
   padding: .5em;
-  margin: .5em
+  margin: .5em;
+  cursor: pointer;
 }
 
 .gallery {

@@ -83,3 +83,15 @@ footer {
     width: 50em;
     border-right: 0px;
 }
+
+.ebayLogo {
+    height: 47px;
+    width: 130px;
+    background-color: blue;
+    margin-right: 1em;
+}
+
+.search_form {
+    display: flex;
+    justify-content: center;
+}
