@@ -20,12 +20,10 @@ class ImageCarousel extends Component {
                 ))
             })}
 
- 
-            
             imageGallery(){
                 return(
-                <div className='container'>
-                        <div className='img-container'>
+                <div className={'container'}>
+                        <div className={'img-container'}>
                             {this.state.images.map((imgObj,index) => (
                             <img 
                             style={{border: this.state.images === imgObj ? '4px solid black ': ''}}
