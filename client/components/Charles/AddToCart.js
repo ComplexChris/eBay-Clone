@@ -69,20 +69,16 @@ let previousCart = null;
         }
       }
 
-      addToWatchList () {
-         this.setState({watchList:!this.state.watchList});
-          console.log('it worked')
-      }
-
 
 
     render () {
-
+        console.log('lets find the image',this.props)
         return (
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart
                 currentCart={this.clickEvent}
                 cartItems={this.state.cartItems}
+                cartImgs={this.props.currentImagesObj}
                 sizeOfCart={Object.values(this.state.cartItems).length}
                 />}
 

@@ -20,7 +20,7 @@ class App extends Component {
     this.setCurrentItemImage = this.setCurrentItemImage.bind(this)
   }
   setCurrentItemImage(data) {
-    this.setState({currentItemImage: data})
+    this.setState({currentItemImage: data[0]})
   }
   setUserID(new_id){
     // Updates new user ID
@@ -38,7 +38,7 @@ class App extends Component {
   componentDidMount() {
     fetch(`/api/items/${this.state.current_item_id}`)
           .then((response) => response.json())
-          .then((data) => {this.setState(() => ({current_item_obj: data[0]}))});
+          .then((data) => {this.setState(() => ({current_item_obj: data}))});
   }
 
   render() {
