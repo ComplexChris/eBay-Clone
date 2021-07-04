@@ -12,13 +12,16 @@ class App extends Component {
     super();
     const user = window.localStorage.getItem("current_user")  || 69    // If no user is logged in, default to 1
     this.state = {
-        current_item_id: 1,
+        current_item_id: 2,
         current_item_obj: {quantity:1},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
-
+        currentItemImage: null
     }
+    this.setCurrentItemImage = this.setCurrentItemImage.bind(this)
   }
-
+  setCurrentItemImage(data) {
+    this.setState({currentItemImage: data})
+  }
   setUserID(new_id){
     // Updates new user ID
     this.setState( { user_id:new_id } )
@@ -47,9 +50,9 @@ class App extends Component {
         
           <aside className="left-sidebar"></aside>
           <main>
-            <ImageCarousel item_id={this.state.current_item_id} />
+            <ImageCarousel item_id={this.state.current_item_id} callBackImage={this.setCurrentItemImage}/>
             <Items itemsSelected={this.state} />
-            <AddToCart quantity={this.state.current_item_obj } user_id={this.state.user_id} current_item_obj={this.state.current_item_obj}  />
+            <AddToCart quantity={this.state.current_item_obj } user_id={this.state.user_id} current_item_obj={this.state.current_item_obj} currentImagesObj={this.state.currentItemImage}/>
           </main>
           <aside className="right-sidebar"></aside>
         </div>
