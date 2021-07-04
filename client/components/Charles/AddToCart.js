@@ -16,7 +16,7 @@ let previousCart = null;
         this.clickEvent = this.clickEvent.bind(this);
     }
 
-    
+
 
     sendRequest () {
         const requestOptions = {
@@ -25,7 +25,7 @@ let previousCart = null;
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({itemId: this.props.current_item_obj.id, userId: this.props.user_id})
-            }   
+            }
 
         fetch("/api/cart/", requestOptions)
               .then((response) => response.json())
@@ -51,7 +51,7 @@ let previousCart = null;
         }).then((itemInfo)=> this.setState({cartItems: itemInfo}));
     }
 
-    
+
 
     clickEvent () {
 
@@ -74,23 +74,23 @@ let previousCart = null;
           console.log('it worked')
       }
 
-      
+
 
     render () {
 
         return (
             <div className={"cartContainer"}>
-                {this.state.currentCart && <CurrentCart 
+                {this.state.currentCart && <CurrentCart
                 currentCart={this.clickEvent}
                 cartItems={this.state.cartItems}
                 sizeOfCart={Object.values(this.state.cartItems).length}
                 />}
 
                 <div className={'ecommerceCard'}>
-                   
+
                     <button className={'addToCartBtn'} onClick={this.clickEvent}>Add to cart</button>
 
-                     
+
                 </div>
             </div>
         );

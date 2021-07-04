@@ -1,7 +1,7 @@
 .itemComponents {
   width: 30em;
   height: 100%;
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
 }
 .itemDescHeader {
@@ -43,6 +43,7 @@
   font-size: 1.2em;
   padding: 1em;
   font-family: Skin-market-sans;
+  overflow-y: auto;
 }
 
 .itemHr {
