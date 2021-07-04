@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
 import "./styles/search_style.css";
+import ShowResults from "./Results"
 
 // Primary Search Bar component, developed by Chris Nguyen
 const version = "1.5.5";
@@ -11,45 +11,74 @@ export default class SearchBar extends Component {
         this.state = {
             ...props,
             history:['Cats', 'Dogs', 'Whatever...'],
-            category:"All Categories"
+            category:"All Categories",
+            search_input : "",
+            search_results: null ,   // Template/mock data
+            show_results: false
         }
-    }
-
-    getData(){
-        return
-        this.state = {...props, scores:[]}
     }
 
     getData(){
         fetch( '/api/search/history' )
             .then((response) => response.json())
             .then((data) => {
-                console.log("DATA: ", data)
                 if(!data) this.setState({ history: data[0] })
             } );
     }
 
-    componentDidMount(){
-        this.getData();
-    }
 
     updateCategory(e){
-        console.log("Submitted: ", e.target.value)
         this.setState({category:e.target.value})
         e.preventDefault()
     }
+    updateSearch(e){
+        this.state.search_input = e.target.value
+        e.preventDefault()
+    }
+    updateItem(e){
+        this.state.setCurrentItem( Number.parseInt( e.currentTarget.id) )
+        this.closeModal(e, true)
+        e.preventDefault()
+    }
+    closeModal(e, force=false){
+        if(e.target===e.currentTarget | force){
+            this.setState({show_results:false})
+        }
+        e.preventDefault()
+    }
+
     submitSearch(e){
-        this.setState({ass:true})
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({search_string:this.state.search_input})
+        }
+        fetch(`/api/items/search`, requestOptions)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log("Search came back: ", data)
+                this.setState(() => ({
+                    search_results: data.rows,
+                    show_results: (data.rows.length>0) ? true : (alert("No results found."), false)
+                }))
+            });
+
         e.preventDefault()
     }
 
     render(){
+        // console.log("STATER:" , this.state )
         const options = ["All Categories", "Electronics", "Furniture", "Whatever"]
+
+        const json_res = [{"id":1,"name":"7up Diet, 355 Ml","category":"Garden","company":"Yost-Pollich","price":"$7.50"}]
+        var repeated = [].concat(... new Array(10).fill(json_res));    // For seeding/testing purposes only
         return (
             <div className={'search_container'} >
                 <form className={"search_form"} onSubmit={this.submitSearch.bind(this) }>
                     <label htmlFor="search_box" className={"input_fields"}>
-                        <input  className='input_box searchBox' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1" required/>
+                        <input  className='input_box searchBox' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1"  onChange={ this.updateSearch.bind(this) } required/>
                         <datalist id="history_options">
                             {this.state.history.map( (searched, i) => <option key={`${searched.id}${i}`}> {searched.search_query} </option> ) }
                         </datalist>
@@ -62,6 +91,8 @@ export default class SearchBar extends Component {
 
                     <input type="submit" value="Search" className="submit_action"   />
                 </form>
+
+                {this.state.show_results && <ShowResults close={this.closeModal.bind(this)} updateItem={this.updateItem.bind(this)} result_items={this.state.search_results} /> }
             </div>
         )
     }
@@ -69,3 +100,4 @@ export default class SearchBar extends Component {
 
 
 // export default LeaderBoard;
+// git rm --cached <file>

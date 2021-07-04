@@ -51,14 +51,13 @@ export default class User extends Component {
 
     getElement(){
         return (
-            (this.state.isLoggedIn) ?
+            (this.props.user_id !== null) ?
             this.welcomeJSX() :
             this.logInJSX()
         )
     }
 
     render(){
-    //console.log("Categories.js PROPS: ", props)
         return( this.getElement() )
     }
 }

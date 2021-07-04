@@ -5,6 +5,7 @@ cd /var/www/html
 $ sudo -u postgres psql fec
 add user fec;
 
+ \conninfo
 
 sudo vim /etc/httpd/conf/httpd.conf
 
@@ -22,3 +23,8 @@ pm2 startup
 http get localhost:4000/api/search/history
 
 netstat -npl
+
+
+pidof node
+sudo kill -9 `pidof node`
+
