@@ -113,4 +113,4 @@ insert into user_db (password, user_name, first_name, last_name, email, gender, 
 		( '0c8e16038ff0886704606a291b2f8adc', 'gocannon2o', 'Gerrie', 'O''Cannon', 'gocannon2o@microsoft.com', 'Bigender', '47.2.208.17'),
 		( 'c53545d151646f63a013d254f765c116', 'dhudspeth2p', 'Dunc', 'Hudspeth', 'dhudspeth2p@ask.com', 'Bigender', '33.64.44.125'),
 		( 'a4403340ace7e55cd9574fee6ab106b7', 'gskerm2q', 'Geoff', 'Skerm', 'gskerm2q@sakura.ne.jp', 'Bigender', '80.121.14.209'),
-		(, '3b2bca488318fa39a4883c8dc7f1e9dd', 'ybrion2r', 'Yolane', 'Brion', 'ybrion2r@umn.edu', 'Female', '189.45.224.165');
+		( '3b2bca488318fa39a4883c8dc7f1e9dd', 'ybrion2r', 'Yolane', 'Brion', 'ybrion2r@umn.edu', 'Female', '189.45.224.165');

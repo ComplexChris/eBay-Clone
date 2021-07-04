@@ -24,13 +24,17 @@ class App extends Component {
   }
   setUserID(new_id){
     // Updates new user ID
-    this.setState( { user_id:new_id } )
+    const viewstate = ()=>console.log("New State: ", this.state)
+    this.setState( { user_id:new_id }, viewstate.bind(this) )
+    window.localStorage.setItem("current_user", new_id)
   }
 
   setCurrentItem(item_id){
-    // Updates new item (if user clicks different i4tem, for example)
-    this.setState( { current_item:item_id } )
+    // Updates new item (if user clicks different item, for example)
+    if( !item_id || item_id==this.state.current_item_id ){console.log("No change. Returning..."); return};
+    this.setState( {current_item_id: item_id} , this.componentDidMount )    // Force re-render of current item
   }
+
   componentDidMount() {
     fetch(`/api/items/${this.state.current_item_id}`)
           .then((response) => response.json())
@@ -41,13 +45,13 @@ class App extends Component {
     return (
       <div>
         <header>
-          <User user_id={this.state.user_id} />
+          <User change_user={ this.setUserID.bind( this ) } user_id={this.state.user_id} />
         </header>
 
 
-        <SearchBar change_user={ this.setUserID.bind( this ) }  user_id={this.state.user_id} />
+        <SearchBar  user_id={this.state.user_id} setCurrentItem={this.setCurrentItem.bind(this)} />
         <div className="content_wrapper">
-        
+
           <aside className="left-sidebar"></aside>
           <main>
             <ImageCarousel item_id={this.state.current_item_id} callBackImage={this.setCurrentItemImage}/>
