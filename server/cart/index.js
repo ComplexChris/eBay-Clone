@@ -6,8 +6,10 @@ const app = express();
 app.use(express.static("./public"));
 app.use(express.json());
 
-app.get("/api/cart", (req, res) => {
-  db.query("SELECT * FROM cart", (err, data) => {
+app.get("/api/cart/:id", (req, res) => {
+  const {id} = req.params;
+
+  db.query("SELECT * FROM cart WHERE userId=$1", [id], (err, data) => {
     if (err) {
       console.log("hey", err);
       res.append("Content-Type", "plain/text");
@@ -30,7 +32,7 @@ app.post('/api/cart/', (req,res)=>{
           res.status(400).send(`An error has occurred!`);
       } else {
           res.append('Content-Type', 'application/json');
-          res.status(200).send('Congrats your post request worked!');
+          res.status(200).json(data);
       }
   });
 

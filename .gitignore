@@ -1,8 +1,7 @@
 /node_modules/
-**/bundle.js
+**/*bundle.js
 .DS_Store
 **/*.icloud
-./*.js*
 README.md
-server.js
-package-lock.json
+**/*-lock*.json
+./.*/
