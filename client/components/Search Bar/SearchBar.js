@@ -76,7 +76,12 @@ export default class SearchBar extends Component {
         var repeated = [].concat(... new Array(10).fill(json_res));    // For seeding/testing purposes only
         return (
             <div className={'search_container'} >
+
                 <form className={"search_form"} onSubmit={this.submitSearch.bind(this) }>
+                    <div className={"ebayLogo"}>
+                        <img src="ebay.png" height="47px" width="130px"></img>
+                    </div>
+
                     <label htmlFor="search_box" className={"input_fields"}>
                         <input  className='input_box searchBox' list="history_options" type="search" id="search_box" name="search_box" placeholder="Search for anything" autoComplete="true" size="30" minLength="1"  onChange={ this.updateSearch.bind(this) } required/>
                         <datalist id="history_options">

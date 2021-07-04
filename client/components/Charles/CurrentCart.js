@@ -7,14 +7,17 @@ class CurrentCart extends React.Component {
         this.state = {
             
         }
-        ;
+        
+       
     }
+
+    
     
     
     render () {
         
         return (
-            <div className={'modal'}>
+            <div className={"modal"}>
                 <div className={"currentCart"}>
                     <div className={'currentCartTitleBar'}>
                         {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""} added to cart 
@@ -46,47 +49,14 @@ class CurrentCart extends React.Component {
                                 )
                             })}
 
-                            
-
-
                         </div>
 
-                        <div className={'qualifyBox'}>
-                            <h1>Spend $43.79 to qualify</h1>
-                            <h3>Extra 20% off $65 or more. <a>Shop now</a></h3>
-                        </div>
                         <button className={"checkoutBtn"}>  
                         Checkout {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""}
                         </button>
                         <button className={"goToCartBtn"}>Go to cart</button>
                     </div>
-                    <div className={"boughtTogether"}>
-                        <h1 className={"boughtTogetherTitle"}>People who viewed this item also viewed</h1>
-                        <div className={"boughtTogetherImgBox"}><img src='band.jpeg' height="115px" width="115px"></img></div>
-                        <div className={"boughtTogetherImgBox"}><img src='gun.jpeg' height="115px" width="115px"></img></div>
-                        <div className={"boughtTogetherImgBox"}><img src='electric.jpeg' height="115px" width="115px"></img></div>
-
-                        <div className={"boughtTogetherImgDesc"}>
-                            <span>THE CRANBERRIES</span>
-                            <br></br><br></br>
-                            
-                            <h1>US $24.99</h1>
-                        </div>
-                        <div className={"boughtTogetherImgDesc"}>
-                            <span>PAINTBALL GUN AUTO-RELOAD</span>
-                            <br></br><br></br>
-                            
-                            <h1>US $85.95</h1>
-                        </div>
-                        <div className={"boughtTogetherImgDesc"}>
-                            <span>ELECTRIC FIREPLACE</span>
-                            <br></br><br></br>
-                            
-                            <h1>US $1999.99</h1>
-                        </div>
-                        
-                        <button className={'seeAllBtn'}>See all</button>
-                    </div>
+                    
                 </div>
             </div>
         );

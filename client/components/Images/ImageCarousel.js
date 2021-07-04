@@ -19,7 +19,8 @@ class ImageCarousel extends Component {
             fetch(`/api/images/${this.props.item_id}`)
             .then((response) => response.json())
             .then((data) => {this.setState(() => (
-                {images:data}
+                {images:data,
+                currentItemImage: this.props.callBackImage(data)}
                 ))
             })}
 

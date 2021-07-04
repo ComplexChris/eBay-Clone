@@ -6,6 +6,7 @@ DROP TABLE IF EXISTS item;
 CREATE TABLE cart (
    userId  INTEGER,
    itemId  INTEGER
+   -- PRIMARY KEY(userId, itemId)
 );
 
 CREATE TABLE userInfo (
