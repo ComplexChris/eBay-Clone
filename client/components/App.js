@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   setCurrentItem(item_id){
-    // Updates new item (if user clicks different item, for example)
+    // Updates new item (if user clicks different i4tem, for example)
     this.setState( { current_item:item_id } )
   }
   componentDidMount() {

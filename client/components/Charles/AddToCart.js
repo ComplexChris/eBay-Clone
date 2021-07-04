@@ -10,12 +10,10 @@ let previousCart = null;
 
         this.state = {
             currentCart:false,
-            cartItems: [],
-            cartAmt: 0
+            cartItems: []
         }
 
         this.clickEvent = this.clickEvent.bind(this);
-        
     }
 
     
@@ -69,14 +67,18 @@ let previousCart = null;
 
             this.sendRequest();
         }
-        
-        
       }
 
+      addToWatchList () {
+         this.setState({watchList:!this.state.watchList});
+          console.log('it worked')
+      }
+
+      
+
     render () {
-        console.log('check it out:' , this.state.cartItems)
+
         return (
-            
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart 
                 currentCart={this.clickEvent}
@@ -85,10 +87,10 @@ let previousCart = null;
                 />}
 
                 <div className={'ecommerceCard'}>
-                    <button className={'buyItNowBtn'}>Buy It Now</button>
+                   
                     <button className={'addToCartBtn'} onClick={this.clickEvent}>Add to cart</button>
-                    <button className={'addToWatchlistBtn'}>Add to Watchlist</button>
-                    <div className={'heartImg'}> <img src='heart.svg' height='12px' width='12px'></img></div> 
+
+                     
                 </div>
             </div>
         );
