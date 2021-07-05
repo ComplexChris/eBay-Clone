@@ -29,7 +29,7 @@ app.get("/api/items/:id", (req, res) => {
 
 app.post("/api/items/search", (req, res) => {
   const {search_string} = req.body;
-  const query = `SELECT * FROM items WHERE (name || description) LIKE $1 LIMIT 10`
+  const query = `SELECT * FROM items WHERE (name || description || id) ILIKE $1 LIMIT 10`
   db.query(query, ['%' + search_string + '%'], (err, data) => {
     res.status( (err) ? (console.log(err), 400) : 200 )
     res.json( (err) ? err : data );

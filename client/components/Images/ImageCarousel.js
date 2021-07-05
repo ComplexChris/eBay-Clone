@@ -82,5 +82,7 @@ class ImageCarousel extends Component {
                 { this.checkForUpdate() }
             </div>
 
-
-
+        )
+    }
+}
+ export default ImageCarousel;
