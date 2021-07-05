@@ -11,10 +11,9 @@ class CurrentCart extends React.Component {
        
     }
 
-    
-    
-    
+
     render () {
+        console.log('here is the props CurrentCart: ', this.props)
         return (
             <div className={"modal"}>
                 <div className={"currentCart"}>
@@ -35,7 +34,7 @@ class CurrentCart extends React.Component {
                                 return (
                                 <div className={"itemAddedWrapper"} key={item.id}>
                                     <div className={"itemImg"}>
-                                        <img src={`${this.props.cartImgs.image_url}`} height="75" width="75"></img>
+                                        <img src={`${item.image_url}`} height="75" width="75"></img>
                                     </div>
                                     <div className={"itemSpecifics"}>
                                         <div className={"itemSpecificsTitle"}>{item.name}</div>

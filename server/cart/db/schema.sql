@@ -8,13 +8,3 @@ CREATE TABLE cart (
    itemId  INTEGER
    -- PRIMARY KEY(userId, itemId)
 );
-
-CREATE TABLE userInfo (
-   userId   SERIAL,
-   userName TEXT
-);
-
-CREATE TABLE item (
-   itemId   INTEGER,
-   itemName TEXT
-);
