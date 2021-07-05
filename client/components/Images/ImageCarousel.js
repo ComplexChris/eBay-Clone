@@ -49,32 +49,32 @@ class ImageCarousel extends Component {
            this.setState({selected:e.target.id})
      }
           
+     uponLoadImage(){
+         if(this.state.images.length === 0){
+             return <div/>
+             }else{
+                 return (
+                     this.imageGallery()
+                 )
+             }
+         }
+     
+     
+     
+     render() {
+         return (
+             <div className='gallery'>
+                 {this.uponLoadImage()}
+             </div>
+                 )
+             }
+    }
                
+         export default ImageCarousel
                 
-        uponLoadImage(){
-            if(this.state.images.length === 0){
-                return <div/>
-                }else{
-                    return (
-                        this.imageGallery()
-                    )
-                }
-            }
-        
-        
-        
-        render() {
-            return (
-                <div className='gallery'>
-                    {this.uponLoadImage()}
-                </div>
                     
                      
                     
 
-        )
-    }
-}
 
-export default ImageCarousel
 
