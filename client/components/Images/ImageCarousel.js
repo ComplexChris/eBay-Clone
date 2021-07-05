@@ -66,7 +66,7 @@ class ImageCarousel extends Component {
         }
     checkForUpdate(){
         // Checks if there is a new item.
-        if(this.state.old_image_id !== this.props.item_id) {
+        if(this.state.old_image_id !== this.props.item_id & this.state.old_image_id!==null) {
             // If so, force re-render of the didMount to fetch new images.
             // After the fetch completes, it'll setState of the new images and re-render.
             this.componentDidMount()
