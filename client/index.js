@@ -7,7 +7,7 @@ function fetch_special(data, requestOptions, port=4000){
     // Will return a promise
     const url = `http://${window.location.hostname}:${port}${data}`
     console.log("URL: ", url);
-    return old_fetch( url , {...requestOptions, mode: 'cors', credentials: 'include', } )
+    return old_fetch( url , {...requestOptions} )
 }
 
 if( true ){//window.localStorage.getItem("fetch_special") == null){
