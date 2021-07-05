@@ -2,7 +2,6 @@ import React from 'react';
 import CurrentCart from './CurrentCart.js';
 import "./styles/styles.css";
 
-let previousCart = null;
 
  class AddToCart extends React.Component {
     constructor (props) {
@@ -70,9 +69,7 @@ let previousCart = null;
       }
 
 
-
     render () {
-        console.log('lets find the image',this.props)
         return (
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart

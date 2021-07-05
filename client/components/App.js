@@ -38,7 +38,7 @@ class App extends Component {
   componentDidMount() {
     fetch(`/api/items/${this.state.current_item_id}`)
           .then((response) => response.json())
-          .then((data) => {this.setState(() => ({current_item_obj: data}))});
+          .then((data) => {this.setState(() => ({current_item_obj: data[0]}))});
   }
 
   render() {
