@@ -17,7 +17,8 @@ app.get("/api/items", (req, res) => {
 });
 
 app.get("/api/items/:id", (req, res) => {
-  db.query("SELECT * FROM items WHERE id=$1;", [req.params.id], (err, data) => {
+  db.query("SELECT a.id, a.name, a.description, a.model, a.category, a.company, a.price, b.image_url FROM items AS a INNER JOIN item_images AS b ON a.id=b.item_id WHERE a.id=$1 LIMIT 1;",
+  [req.params.id], (err, data) => {
     if (err) {
       console.log("err", err);
       res.status(404).send(err);
