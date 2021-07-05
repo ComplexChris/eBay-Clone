@@ -2,7 +2,6 @@ import React from 'react';
 import CurrentCart from './CurrentCart.js';
 import "./styles/styles.css";
 
-let previousCart = null;
 
  class AddToCart extends React.Component {
     constructor (props) {
@@ -69,20 +68,14 @@ let previousCart = null;
         }
       }
 
-      addToWatchList () {
-         this.setState({watchList:!this.state.watchList});
-          console.log('it worked')
-      }
-
-
 
     render () {
-
         return (
             <div className={"cartContainer"}>
                 {this.state.currentCart && <CurrentCart
                 currentCart={this.clickEvent}
                 cartItems={this.state.cartItems}
+                cartImgs={this.props.currentImagesObj}
                 sizeOfCart={Object.values(this.state.cartItems).length}
                 />}
 
