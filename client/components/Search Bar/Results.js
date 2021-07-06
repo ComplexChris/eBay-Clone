@@ -5,11 +5,14 @@ import "./styles/search_style.css";
 function ShowResults(props){
     const resQty = props.result_items.length
     const titleMsg = (resQty<=0) ? "No results found" : `    `
+    const styleSettings = {
+        height: '8em'
+    }
 
     return (
         <div className={'results_modal'} onClick={props.close.bind(this)} >
-            <div className={"resultsBox"}>
-                <div className={'resultsTitleBar'}>
+            <div className={"resultsBox"} >
+                <div className={'resultsTitleBar'} >
                     {props.result_items.length} results found.
                     <img
                         src="close.svg"
@@ -18,7 +21,7 @@ function ShowResults(props){
                         >
                     </img>
                 </div>
-                <div className={'resultsItemAdded'}>
+                <div className={'resultsItemAdded'} style={styleSettings}>
                     <div className={"results_overflowContainer"}>
                         {props.result_items.map((item)=>{
                             return (
