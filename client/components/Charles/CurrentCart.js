@@ -36,7 +36,7 @@ class CurrentCart extends React.Component {
                         <div className={"overflowContainer"}>
 
 
-                            {this.props.cartItems.map((item, index)=>{
+                            {this.props.cartItems.reverse().map((item, index)=>{
                                 return (
                                 <div className={"itemAddedWrapper"} key={item.name+index}>
                                     <div className={"itemImg"}>

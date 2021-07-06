@@ -13,7 +13,7 @@ class App extends Component {
     const user = Number.parseInt( window.localStorage.getItem("current_user")  )|| 69    // If no user is logged in, default to 1
     const local_state = JSON.parse(window.localStorage.getItem("cached_state")   ) || {}
     this.state = {
-        current_item_id: 2,
+        current_item_id: 16,
         current_item_obj: {quantity:1},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
         currentItemImage: [],
@@ -32,6 +32,7 @@ class App extends Component {
 
   setUserID(new_id){
     // Updates new user ID
+    // Also used to reset entire state
     const viewstate = ()=>console.log("New State: ", this.state)
     //this.setState( { user_id:new_id }, viewstate.bind(this) )
     window.localStorage.setItem("current_user", new_id)
@@ -40,11 +41,16 @@ class App extends Component {
     //new_id==null && window.localStorage.removeItem("cached_state")
   }
 
-  setCurrentItem(item_id){
+  setCurrentItem(item_id, force=false){
     // Updates new item (if user clicks different item, for example)
     console.log("\nUpdating: ", item_id)
-    if( !item_id || item_id==this.state.current_item_id ){console.log("No change. Returning..."); return};
-    this.setState( {current_item_id: item_id} , this.componentDidMount )    // Force re-render of current item
+    if( (!item_id || item_id==this.state.current_item_id) && force==false ){
+      console.log("No change. Returning...");
+      return
+    }
+    else{
+      this.setState( {current_item_id: item_id} , this.componentDidMount )    // Force re-render of current item
+    }
   }
 
   componentDidMount() {
@@ -81,6 +87,11 @@ class App extends Component {
   render() {
     window.localStorage.setItem("cached_state", JSON.stringify(this.state) )
     console.log("Re-Rendered", this.state)
+    if(this.state.current_item_obj==null){
+      console.log("Unknown item/error. Attempting purge of state")
+      this.setUserID( this.state.user_id || 1 );
+      return <div/>;    // Temporarily give empty page, then setState will re-render default page (Search item 71 for proof)
+    }
     return (
       <div>
         <header className={'root_header'}>

@@ -15,11 +15,12 @@ class ImageCarousel extends Component {
     }
 
     componentDidMount() {
-        this.setState(  {old_image_id: this.props.item_id} )
+        //this.setState(  {old_image_id: this.props.item_id} )
             fetch(`/api/images/${this.props.item_id}`)
             .then((response) => response.json())
             .then((data) => {this.setState(() => (
                 {images:data,
+                old_image_id: this.props.item_id,
                 currentItemImage: this.props.callBackImage(data)}
                 ))
             })}
