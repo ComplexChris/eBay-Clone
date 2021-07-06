@@ -85,6 +85,4 @@ class ImageCarousel extends Component {
         )
     }
 }
-
-export default ImageCarousel
-
+ export default ImageCarousel;
