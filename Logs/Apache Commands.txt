@@ -1,0 +1,73 @@
+ https://serverfault.com/a/612363
+
+ cat /etc/*elease
+
+ ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+
+cd /var/www/html
+
+sudo su - postgres
+
+$ sudo -u postgres psql fec
+add user fec;
+
+ \conninfo
+
+sudo vim /etc/httpd/conf/httpd.conf
+
+sudo systemctl status httpd
+
+
+sudo tail -f /var/log/httpd/access_log
+
+
+pm2 start "npm run start-wsl"
+pm2 save
+pm2 startup
+ pm2 restart default
+
+http get localhost:4000/api/search/history
+
+netstat -npl
+
+
+pidof node
+sudo kill -9 `pidof node`
+
+http get localhost:3001/api/items/7
+
+
+sudo vim /var/lib/pgsql/data/pg_hba.conf
+
+host all all 127.0.0.1/32 trust
+
+
+
+sudo vim server/search/db/config.js
+
+apachectl -S
+
+ sudo systemctl restart httpd
+
+sudo service httpd status
+sudo service postgresql status
+Redirecting to /bin/systemctl status postgresql.service
+● postgresql.service - PostgreSQL database server
+   Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; vendor preset: disabled)
+   Active: active (running) since Sun 2021-07-04 07:09:07 UTC; 3min 42s ago
+  Process: 7037 ExecStop=/usr/bin/pg_ctl stop -D ${PGDATA} -s -m fast (code=exited, status=0/SUCCESS)
+  Process: 7045 ExecStart=/usr/bin/pg_ctl start -D ${PGDATA} -s -o -p ${PGPORT} -w -t 300 (code=exited, status=0/SUCCESS)
+  Process: 7039 ExecStartPre=/usr/bin/postgresql-check-db-dir ${PGDATA} (code=exited, status=0/SUCCESS)
+ Main PID: 7049 (postgres)
+   CGroup: /system.slice/postgresql.service
+           ├─7049 /usr/bin/postgres -D /var/lib/pgsql/data -p 5432
+           ├─7050 postgres: logger process
+           ├─7052 postgres: checkpointer process
+           ├─7053 postgres: writer process
+           ├─7054 postgres: wal writer process
+           ├─7055 postgres: autovacuum launcher process
+           └─7056 postgres: stats collector process
+
+Jul 04 07:09:06 ip-xxx-31-12-xxx.us-east-2.compute.internal systemd[1]: Stopped PostgreSQL database server.
+Jul 04 07:09:06 ip-xxx-31-12-xxx.us-east-2.compute.internal systemd[1]: Starting PostgreSQL database server...
+Jul 04 07:09:07 ip-xxx-31-12-xxx.us-east-2.compute.internal systemd[1]: Started PostgreSQL database server.

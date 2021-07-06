@@ -1,0 +1,820 @@
+sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+sudo yum install -y httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo usermod -a -G apache ec2-user
+groups
+sudo chown -R ec2-user:apache /var/www
+sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-6-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo yum install -y postgresql13-server
+psql
+postgres
+postgresql
+npm install postgres
+psql
+curl -O http://yum.postgresql.org/9.2/redhat/rhel-6-x86_64/pgdg-centos92-9.2-6.noarch.rpm
+rpm -ivh pgdg-centos92-9.2-6.noarch.rpm
+yum list postgres*
+yum install postgresql92-server.x86_64 postgresql92-contrib.x86_64 postgresql92-devel.x86_64
+sudo yum install postgresql92-server.x86_64 postgresql92-contrib.x86_64 postgresql92-devel.x86_64
+psql
+service
+service --status-all
+postgresql 
+postgresql-server 
+yum list | grep postgres
+yum install -y postgresql-libs-9.2.24-1.amzn2.0.1.x86_64 postgresql-9.2.24-1.amzn2.0.1.x86_64
+sudo yum install -y postgresql-libs-9.2.24-1.amzn2.0.1.x86_64 postgresql-9.2.24-1.amzn2.0.1.x86_64
+psql
+psql -v
+psql --help
+psql --version
+createdb fec
+dnf install postgresql
+yum list postgresql*
+sudo yum install postgresql11-server
+sudo yum install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo yum install postgresql11-server
+sudo /usr/pgsql-11/bin/postgresql-11-setup initdb
+psql
+psql initdb
+sudo createdb test
+sudo service postgresql start
+sudo service psql start
+sudo service /var/run/postgresql/.s.PGSQL.5432 start
+sudo -i -u postgres
+sudo systemctl start postgresql-11
+sudo systemctl start psql
+postgresql
+psql-server
+sudo -u postgres psql
+sudo -u postgres createdb sammy
+sudo adduser sammy
+sudo -i -u postgres
+yum install sudo
+sudo yum install sudo
+exit
+groups
+sudo -i -u postgres
+psql -U toor
+service postgresql-9.2 start
+systemctl list-units|grep postgresql
+systemctl list-units|grep psql
+/bin/systemctl start postgresql
+/bin/systemctl start psql
+service psql start
+run systemctl list-units|grep postgresql
+su - postgres -c "psql"
+service postgresql-9.4 initdb
+service postgresql-9.2 initdb
+service postgresql-9.2 start
+service postgresql-9.4 start
+ systemctl start deluged
+ sudo systemctl start deluged
+sudo apt install policykit-1
+sudo yum install policykit-1
+sudo yum install org.freedesktop.PolicyKit1
+sudo yum install PolicyKit1
+createdb fecsudo systemctl start ceph-osd@205
+sudo systemctl start ceph-osd@205
+su
+sudo yum install polkit
+ systemctl start deluged
+sudo service postgresql start
+service postgresql-9.4 start
+fUWS[~,6fwid6M5
+service postgresql-9.4 start
+su
+passwd
+aws configure
+service postgresql-9.4 start
+sudo service postgresql-9.4 start
+sudo service postgresql-9.2 start
+cd /
+ls
+ls etc
+ls etc/www
+ls var
+cd var/www
+ls
+cd html
+ls
+ls -la
+cat /etc/httpd/conf/httpd.conf
+ls /users
+ls /
+ls usr
+ls /usr
+ls ~
+cat ~
+vim /etc/httpd/conf/httpd.conf
+sudo vim /etc/httpd/conf/httpd.conf
+cat /etc/httpd/conf/httpd.conf
+httpd -k restart
+mkdir ~/mcsp-fec
+httpd -k restart
+sudo httpd -k restart
+cd ~
+cd mcsp-fec/
+ls
+touch index.html
+ls
+ifconfig
+sudo systemctl start postgresql
+sudo postgresql-setup initdb
+sudo yum install postgresql-server postgresql-contrib
+sudo postgresql-setup initdb
+sudo systemctl enable postgresql
+sudo systemctl start postgresql
+sudo -u postgres psql -c "SELECT version();"
+createdb fec
+sudo -u postgres
+sudo -u postgres createdb fec
+sudo -u postgres psql createdb fec
+sudo -u postgres psql createdb
+sudo -u postgres psql -c fec
+sudo -u postgres psql -c "\dt"
+sudo su - postgres
+ls
+ls -la
+pwd
+ls 
+ls /
+clear
+sudo apt-get update
+apt-get update
+yarn
+sudo yum update
+sudo yum install git
+sudo yum install npm
+git --help
+sudo yum install apache2
+sudo yum install apache
+sudo yum install lamp
+sudo yum install nodemon
+sudo yum install nodejs
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+yum install nodejs14
+sudo yum install nodejs14
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+sudo yum install -y nodejs
+npm
+npm -v
+sudo vim /etc/httpd/conf/httpd.conf
+sudo httpd -k restart
+ls
+ls /var
+cd ~
+ld
+ls
+cd mcsp-fec/
+ls
+git clone https://github.com/ComplexChris/mcsp-fce.git
+ls
+cd mcsp-fce/
+ls
+sudo vim /etc/httpd/conf/httpd.conf
+ls
+npm run setup-db
+npm install
+npm fund
+npm audit fix
+npm run setup-db
+ls -la
+ls server
+cat package.json 
+rm package-lock.json 
+npm run setup-db
+npm update
+npm audit fix
+npm fund
+npm audit fix
+npm --version
+npm run setup-db
+npm run start
+npm -v
+sudo cat /etc/os-release. lsb_release -a. hostnamectl
+cat /etc/os-release
+sudo yum install --assumeyes epel-release
+sudo amazon-linux-extras install epel
+sudo yum install --assumeyes nodejs
+kill 4662
+
+kill signal 4662
+sudo yum install --assumeyes nodejs
+npm outdated
+npm install npm@latest -g
+sudo npm install npm@latest -g
+npm -v
+npm run setup-db
+sudo -u postgres psql
+sudo -u postgres psql fec
+npm run setup-db
+npm run start
+ls
+cd ..
+ls
+sudo mv -r mcsp-fce/ /var/www/html/
+sudo mv mcsp-fce/ /var/www/html/
+ls
+cd /var/www
+ls
+cd html
+ls
+cd ..
+ls
+lls cgi-bin/
+ls
+ls cgi-bin/
+sudo ls -la cgi-bin/
+cd html/
+ls
+cd mcsp-fce/
+ls
+mv * ./..
+ls
+cd ..
+ls
+pwd
+ls
+clear
+ls -la
+cat server
+cat server.js
+ls
+ls public/
+sudo vim /etc/httpd/conf/httpd.conf
+sudo service apache2 restart
+sudo service httpd restart
+service
+service --status-all
+lsof -i :port -S
+netstat -a | grep port
+sudo netstat -a | grep port
+fuser 8453/tcp
+lsof -i TCP:8453
+netstat -punta | grep 4000
+netstat
+netstat | grep 4000
+ls
+npm run setup-db
+sudo su postgres psql fec
+sudo su - postgres psql fec
+sudo -u postgres psql fec
+git status
+ls
+ls -la
+ls ~/mcsp-fec/
+ls -la ~/mcsp-fec/
+ls
+ls -la mcsp-fce/
+cd mcsp-fce/
+ls
+sudo mv *.* ./..
+cd ..
+ls
+mv --help
+mv mcsp-fce/* .
+ls
+mv ./mcsp-fce/* .
+cp -r ./mcsp-fce/* .
+cp -r ./mcsp-fce/* .
+shopt -s dotglob mv ./mcsp-fce/* .
+shopt -s dotglob
+mv ./mcsp-fce/* .
+ls -la
+git status
+git log
+git branch
+ls
+sudo vim server/users/user_db_schema_seed.sql 
+npm run setup-db
+npm run start
+ls
+sudo vim /etc/httpd/conf/httpd.conf
+sudo systemctl status httpd
+sudo systemctl restart httpd
+sudo vim /etc/httpd/conf/httpd.conf
+sudo systemctl restart httpd
+http
+sudo yum install http
+tail -f /var/www/log/apache2/other_vhosts.access.log
+sudo tail -f /var/log/apache2/access.log
+tail -f /var/log/apache2/other_vhosts_access.log
+ls /var/log/httpd/
+sudo ls /var/log/httpd/
+sudo cat /var/log/httpd/access_log
+sudo cat /var/log/httpd/access_logsudo tail -f /var/log/httpd/access_log
+sudo tail -f /var/log/httpd/access_log
+curl --help
+curl localhost:4000
+curl -g localhost:4000
+curl -g localhost:4001
+curl -g localhost:40httpd01
+httpd
+httpd get
+httpd get localhost:4000
+yum install httpie
+sudo yum install httpie
+http
+http get localhost:4000
+http get localhost/api:4000
+http get localhost/api/history:4000
+http get localhost/api/search:4000
+http get localhost:4000/api/search
+http get localhost:4000
+sudo service httpd restart
+ls
+git pull origin main
+npm run start
+npm -s install aws-sdk
+npm install -g pm2
+sudo npm install -g pm2
+npm fund
+npm audit fix
+pm2 run start
+pm2 examples
+pm2 ls
+http get localhost:4000/api/search/history
+pm2 start "npm run start"
+npm save
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user
+pm2 logs -h
+pm2 logs
+pm2 logs --lines
+pm2 logs --lines 15
+http get localhost:4000/api/search/history
+sudo -u postgres psql fec
+ls
+sudo vim package.json 
+pm2 -ls
+pm2 ls
+pm2 --help
+pm2 delete "npm run start"
+pm2 start "npm run start-wsl"
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user
+http get localhost:4000/api/search/history
+ls
+cat package
+cat package.json 
+http get localhost:4000/api/search/history
+pm2 logs
+pm2 restart
+pm2 ls
+pm2 restart default
+pm2 logs
+pm2 restart default
+pm2 logs
+http get localhost:4000/api/search/history
+http get localhost:4000
+ls
+cd /var/www/
+ls
+cd html/
+ls
+sudo vim server.js 
+git checkout server.js
+cd server/
+ls
+cd search/
+ls
+sudo vim index.js 
+ls
+cd db
+ls
+sudo vim config.js 
+http get localhost:4000/api/search/history
+netstat -tulpn
+ls -l /proc/1138/exe
+fuser 7000/tcp
+fuser 5432/tcp
+fuser 4000/tcp
+ls -l /proc8113/exe
+sudo ls -l /proc8113/exe
+ps
+netstat
+clear
+lsof -Pnl +M -i4
+lsof -Pnl +M -i6
+netstat -npl
+netstat -a | grep port
+netstat --help
+netstat -vnpl
+netstat --help
+netstat -vnpleNr
+netstat -vnpler
+netstat -vnpleN
+services
+service
+service --status-all
+netstat -punta 
+sudo lsof -i
+ls
+cd ..
+ls
+sudo vim index.js 
+http get localhost:4000/api/search/history
+sudo vim index.js 
+cd d
+sudo vim config.js 
+cd ../..
+ls
+cd ..
+ls
+sudo vim package.json 
+cd server/search/
+sudo vim index.js 
+http get localhost:4000/api/search/history
+http get localhost:4000/api/search/
+http get localhost:4000/api/search/history
+sudo yum update
+cd /var/www/
+ls
+cd html
+ls
+ls -la
+git pull origin Main
+git pull origin main
+git pull -f origin main
+git pull --help
+git pull -f -v --show-forced-updates --progress origin main
+git pull --force -v --show-forced-updates --progress origin main
+cat package.json 
+git checkout package.json
+git checkout server/search/db/config.js
+git status
+git pull --force -v --show-forced-updates --progress origin main
+ls
+git status
+git pull origin main
+git pull -f origin main
+git skip-worktree
+git reset HEAD -- .
+git pull -f origin main
+git fetch --all
+git reset--hard
+git reset --hard
+git pull -f origin main
+pm2 ls
+pm2 restart default
+sudo -u postgres psql fec
+reboot
+sudo reboot
+pm2 ls
+sudo -u postgres psql fec
+pm2 default
+sudo tail -f /var/log/httpd/access_log
+pm2 stop default
+sudo service httpd stop
+cd /var/www/html/
+ls
+npm run setup-db
+git log
+git checkout origin Chris
+git branch
+git pull origin Chris
+git log
+git branch
+git checkout Chris
+git pull origin Chris
+git log
+ls
+npm run setup-db
+npm run start
+ls
+sudo vim package.json 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+cd server/search/
+ls
+sudo vim index.js 
+cd ../..
+ls
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+ls
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server/search/db/config.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+pm2 ls
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server/search/db/config.js 
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+node server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+npm install -s open
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo vim server.js 
+sudo DATABASE_URL=postgres://ec2-user:password@localhost:5432/fec npm run start
+sudo service httpd start
+sudo service httpd status
+sudo service psql status
+sudo service postgrepsql status
+sudo service postgres status
+service
+service --status-all
+service --help
+sudo service --status-all
+sudo -u postgres psql fec
+ls /var/run/postgresql
+ls -la /var/run/postgresql
+http get localhost:4000/api/search/history
+sudo -u postgres psql fec
+http get localhost:4000/api/search/history
+http get localhost:4000
+http get localhost:4000/api
+http get localhost:4000/api/search/history
+http get localhost:3002/api/search/history
+postgres://ec2-user:password@localhost:5432/fec
+sudo -u postgres psql fec
+http get localhost:3002/api/search/history
+sudo -u postgres -h localhost
+sudo -U postgres -h localhost
+sudo -U postgres -h localhost psql fec
+psql -U postgres -h localhost
+sudo -u postgres psql
+psql -U postgres -h localhost
+http get localhost:3001/api/items/7
+sudo a2ensite fec
+sudo yum install a2ensite 
+sudo a2ensite fec
+sudo su - postgres
+sudo yum install oidentd
+http get localhost:3001/api/items/7
+sudo -u postgres psql
+sudo -u ec2-user psql
+sudo -u postgres psql fec
+sudo -u ec2-user psql fec
+ls /var/lib/pgsql
+sudo ls /var/lib/pgsql
+sudo ls /var/lib/pgsql/**/*
+sudo ls /var/lib/pgsql/data
+sudo vim /var/lib/pgsql/data/pg_hba.conf
+sudo service postgresql-12 restart
+sudo service postgresql restart
+sudo service postgresql --status
+sudo service postgresql -status
+sudo service --status postgresql
+sudo service status postgresql
+sudo service postgresql status
+http get localhost:3001/api/items/7
+http get localhost:4000/api/items/7
+http get localhost:3001/api/items/7
+http get localhost:4000/api/items/7
+http get localhost:4000/api/search/history
+sudo service status postgresql
+sudo -u ec2-user psql fec
+sudo -u postgres psql fec
+sudo vim /var/lib/pgsql/data/pg_hba.conf
+sudo service postgresql restart
+sudo service postgresql status
+http get localhost:4000/api/search/history
+http get localhost:3001/api/items/7
+http get localhost:4000/api/items/7
+http get localhost:3001/api/items/7
+http get localhost:4000/api/items/7
+http get localhost:3001/api/items/7
+http get localhost:4000/api/search/history
+sudo service httpd restart
+sudo service httpd status
+sudo service postgresql status
+sudo -- httpd
+sudo -- su httpd
+sudo su - postgres
+sudo su - httpd
+sudo service httpd status
+sudo su - postgres
+sudo ls -la /usr/lib/systemd/system/
+clear
+apachectl -S
+ls /etc/httpd
+sudo cat  /etc/httpd conf
+sudo cat  /etc/httpd/conf
+sudo ls -la  /etc/httpd/conf
+sudo ls -la  /etc/httpd/conf.d
+sudo ls -la  /etc/httpd/conf.modules.d/
+sudo ls -la  /etc/httpd/logs
+sudo ls -la  /etc/httpd/
+sudo cat  /etc/httpd/logs
+sudo ls -la  /etc/httpd/logs
+sudo ls -la  /etc/httpd/conf
+sudo cat  /etc/httpd/conf/httpd.conf 
+ls -la
+ls /var/www
+ls -la /var/www
+ls -la /var/www/cgi-bin/
+ls -la /var/www/html/
+ls /etc
+ls /etc/httpd/
+ls /etc/httpd/conf
+SITES_AVAILABLE_CONFIG_DIR="/etc/httpd/sites-available";
+SITES_ENABLED_CONFIG_DIR="/etc/httpd/sites-enabled";
+if [ $1 ]; then   if [ -f "${SITES_ENABLED_CONFIG_DIR}/${1}" ]; then   elif [ ! -w $SITES_ENABLED_CONFIG_DIR ]; then
+    echo "You don't have permission to do this. Try to run the command as root."
+  elif [ -f "${SITES_AVAILABLE_CONFIG_DIR}/${1}" ]; then
+    echo "Enabling site ${1}...";
+    ln -s $SITES_AVAILABLE_CONFIG_DIR/$1 $SITES_ENABLED_CONFIG_DIR/$1
+ else
+fi
+else
+  echo "Please, inform the name of the site to be enabled."
+fi
+ls
+pwd
+touch aen
+touch aen.conf
+vim aen.conf 
+aen.conf
+start aen.conf
+run aen.conf
+cd /etc/httpd/
+mkdir sites-available sites-enabled
+sudo mkdir sites-available sites-enabled
+vim conf/httpd.conf
+sudo vim conf/httpd.conf
+ls
+cd sites-available/
+ls
+sudo vim fec.lan.conf
+sudo /etc/hosts
+sudo ls /etc/hosts
+sudo vim fec.lan.conf
+sudo service httpd restart
+sudo service httpd status
+sudo vim fec.lan.conf
+sudo service httpd restart
+sudo service httpd status
+sudo vim fec.lan.conf
+ls /var/www/html
+sudo service httpd restart
+http get localhost:4000/api/items/7
+http get localhost:3001/api/items/7
+sudo service httpd status
+sudo vim fec.lan.conf
+sudo service httpd restart
+sudo service httpd status
+aptitude    
+sudo yum install aptitude    
+httpd install
+sudo yum install -y libapache2-mod-proxy-html libxml2-dev
+httpd -M
+httpd -M | grep proxy
+httpd -M | grep module
+httpd -M | grep lbmethod
+httpd -M | grep proxy_bal
+httpd -M | grep proxy_http_mod
+sudo systemctl restart httpd
+sudo systemctl status httpd
+sudo vim /etc/httpd/conf.modules.d/00-proxy.conf
+curl http://127.0.0.1:8081/
+curl http://127.0.0.1:4000/
+curl http://127.0.0.1:4000/api/search
+curl http://127.0.0.1:4000/api/search/history
+sudo vim fec.lan.conf
+sudo systemctl restart httpd
+curl http://127.0.0.1:4000/api/search/history
+service iptables save
+chkconfig iptables off
+sudo chkconfig iptables off
+service iptables stop
+sudo service iptables stop
+sudo service iptables save
+sudo service iptables reload
+sudo service iptables stop
+service iptables status
+curl http://127.0.0.1:8081/
+curl http://127.0.0.1:4000/
+curl http://127.0.0.1:4000/api/items/7
+sudo ls /root/.npm/_logs
+sudo ls ~/.npm/_logs
+sudo firewall-cmd --state
+sudo systemctl disable firewalld;
+info
+getinfo
+systemctl disable firewalld # systemctl stop firewalld
+sudo systemctl disable firewalld # systemctl stop firewalld
+sudo systemctl status firewalld
+cat /etc/os-release. lsb_release -a. hostnamectl
+cat /etc/os-release. lsb_release -a. hostnamectl.
+uname -a
+lsb_release -a
+cat /etc/lsb-release 
+cat /etc/issue.net
+cat /etc/redhat-release
+cat /etc/*_version
+/etc/issue
+sudo /etc/issue
+cat /etc/*elease
+firewall-cmd --list-all
+systemctl status firewalld
+systemctl stop libvirtd.service
+sudo systemctl stop libvirtd.service
+curl http://127.0.0.1:4000/api/items/7
+sudo service httpd restart
+sudo service httpd status
+pm2 ls
+sudo service httpd status
+sudo service httpd restart
+ifconfig
+cd /var/www/html/
+ls
+sudo vim server.js 
+http get localhost:3001/api/items/7
+sudo vim /etc/httpd/conf/httpd.conf
+ls
+ls /etc/httpd
+ls /etc/httpd/sites-available/
+ls
+cd /etc/httpd/sites-available/
+ls
+sudo vim fec.lan.conf 
+scp --help
+ls
+scp fec.lan.conf ~/test
+sudo vim /etc/httpd/conf/httpd.conf
+http get localhost:3001/api/items/7
+sudo service httpd restart
+http get localhost:3001/api/items/7
+http get localhost:4000/api/items/7
+sudo service httpd restart
+http get localhost:3001/api/items/7
+sudo service httpd restart
+http get localhost:3001/api/items/7
+pwd
+cd /var/www/
+cd html/
+ls
+node server.js
+ls
+npm run setup-db
+npm run start
+pidof node
+sudo kill -9 `pidof node`
+pidof node
+npm run start
+ls
+npm run start
+sudo vim client/index.js 
+npm run start
+sudo vim client/index.js 
+sudo vim client/components/App.js 
+npm run start
+git checkout client/components/App.js 
+ls
+sudo vim client/index.js 
+npm run start
+git checkout client/index.js 
+sudo vim client/index.js 
+npm run start
+git checkout client/index.js 
+sudo vim client/index.js 
+git checkout client/index.js 
+sudo vim client/index.js 
+git checkout client/index.js 
+sudo vim client/index.js 
+npm run start
+git checkout client/index.js 
+sudo vim client/index.js 
+npm run start
+sudo vim client/index.js 
+npm run start
+git checkout .
+git branch
+git pull origin Chris
+git status
+npm run start
+npm install
+npm run start
+git pull origin Chris
+cat server.js 
+git pull origin Chris
+npm run start
+pm2 ls
+pm2 start default
+pm2 ls
+pm2 remove default
+pm2 rm default
+pm2 -h
+pm2 delete default
+pm2 start "npm run start"
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ec2-user --hp /home/ec2-user
+pm2 ls
