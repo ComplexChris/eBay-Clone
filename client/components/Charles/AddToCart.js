@@ -37,8 +37,7 @@ import "./styles/styles.css";
         fetch(`/api/cart/${this.props.user_id}`)
               .then((response) => response.json())
               .then((data) => {
-                  console.log(`get data by id:${this.props.user_id}`, data);
-
+                  
              return Promise.all(
                   data.map((cartItem)=>{
                     return fetch(`/api/items/${cartItem.itemid}`)

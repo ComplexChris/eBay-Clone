@@ -216,3 +216,8 @@
   width: 90%;
   height: 100%;
 }
+
+.itemTitleUnderline:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

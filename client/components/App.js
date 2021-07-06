@@ -15,9 +15,10 @@ class App extends Component {
         current_item_id: 2,
         current_item_obj: {quantity:1},
         user_id: Number.parseInt( user ),    // Can be null if logged out, create conditional
-        currentItemImage: []
+        currentItemImage: [],
+        applyStyle: false
     }
-    this.setCurrentItemImage = this.setCurrentItemImage.bind(this)
+    this.setCurrentItemImage = this.setCurrentItemImage.bind(this);
   }
 
 
@@ -52,12 +53,18 @@ class App extends Component {
         </header>
 
 
-        <SearchBar  user_id={this.state.user_id} setCurrentItem={this.setCurrentItem.bind(this)} />
+        <SearchBar  
+        user_id={this.state.user_id} 
+        setCurrentItem={this.setCurrentItem.bind(this)}
+        />
         <div className="content_wrapper">
 
           <aside className="left-sidebar"></aside>
           <main>
-            <ImageCarousel item_id={this.state.current_item_id} callBackImage={this.setCurrentItemImage}/>
+            <ImageCarousel 
+            item_id={this.state.current_item_id} 
+            callBackImage={this.setCurrentItemImage}
+            />
             <Items itemsSelected={this.state} />
             <AddToCart 
             quantity={this.state.current_item_obj } 
