@@ -15,11 +15,12 @@ class ImageCarousel extends Component {
     }
 
     componentDidMount() {
-        this.setState({old_image_id: this.props.item_id})
+        //this.setState(  {old_image_id: this.props.item_id} )
             fetch(`/api/images/${this.props.item_id}`)
             .then((response) => response.json())
             .then((data) => {this.setState(() => (
                 {images:data,
+                old_image_id: this.props.item_id,
                 currentItemImage: this.props.callBackImage(data)}
                 ))
             })}
@@ -66,7 +67,7 @@ class ImageCarousel extends Component {
         }
     checkForUpdate(){
         // Checks if there is a new item.
-        if(this.state.old_image_id !== this.props.item_id) {
+        if(this.state.old_image_id !== this.props.item_id & this.state.old_image_id!==null) {
             // If so, force re-render of the didMount to fetch new images.
             // After the fetch completes, it'll setState of the new images and re-render.
             this.componentDidMount()
@@ -85,6 +86,4 @@ class ImageCarousel extends Component {
         )
     }
 }
-
-export default ImageCarousel
-
+ export default ImageCarousel;

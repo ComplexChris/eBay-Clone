@@ -1,0 +1,860 @@
+
+ 1149  cd GitHub_WSL/
+ 1150  ls
+ 1151  cd mcsp-fce/
+ 1152  ls
+ 1153  touch 'Put Files Here'
+ 1154  ls
+ 1155  ls -la
+ 1156  git add -A
+ 1157  git commit -m "Added Empty Folders"
+ 1158  git push
+ 1159  ls
+ 1160  code .
+ 1161  ls
+ 1162  cd server
+ 1163  ls
+ 1164  cd Search\ Service/
+ 1165  ls
+ 1166  rm Put\ Files\ Here
+ 1167  ls
+ 1168  sudo service postgresql start
+ 1169  createdb SearchHistory
+ 1170  psql -f schema.sql  SearchHistory
+ 1171  psql -f seed_main.sql  SearchHistory
+ 1172  clear
+ 1173  psql -f schema.sql  SearchHistory
+ 1174  psql -f seed_main.sql  SearchHistory
+ 1175  psql SearchHistory
+ 1176  ls
+ 1177  cd ..
+ 1178  ls
+ 1179  nodemon index.js
+ 1180  npm install
+ 1181  nodemon index.js
+ 1182  ls
+ 1183  cd GitHub_WSL/
+ 1184  ls
+ 1185  cd mcsp-fce/
+ 1186  ;s
+ 1187  ls
+ 1188  pwd
+ 1189  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1190  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1191  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1192  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1193  ls
+ 1194  ls -la
+ 1195  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1196  cd ..
+ 1197  ls
+ 1198  cd ~
+ 1199  ls
+ 1200  cd GitHub_WSL/
+ 1201  ls
+ 1202  cd mcsp-mvp-react/
+ 1203  ls
+ 1204  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1205  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1206  ls
+ 1207  ls -la
+ 1208  cd /home/toor/GitHub_WSL/mcsp-fce
+ 1209  ls ~/.bash_profile
+ 1210  ls ~
+ 1211  ls -a ~
+ 1212  ls -la
+ 1213  cat .bashrc
+ 1214  code .
+ 1215  cd GitHub_WSL/
+ 1216  ls
+ 1217  cd mcsp-fce/
+ 1218  ls
+ 1219  touch Test.txt
+ 1220  git add Test.txt
+ 1221  git commit -m "Testing commit from Chris branch to main branch"
+ 1222  git push origin Chris main
+ 1223  git status
+ 1224  git add Test.txt
+ 1225  git commit -m "Testing commit from Chris branch to main branch 2"
+ 1226  git push origin main
+ 1227  git commit -A
+ 1228  git add -A
+ 1229  git checkout main Test.txt
+ 1230  ls
+ 1231  git checkout main Test.TXT
+ 1232  git checkout main ./Test.TXT
+ 1233  git add Test.TXT
+ 1234  git commit -m "Testing commit from Chris branch to main branch 3"
+ 1235  git status
+ 1236  git push origin Chris
+ 1237  git add Test.TXT
+ 1238  git commit -m "Testing Test.TXT"
+ 1239  git add Test.TXT
+ 1240  git commit -m "Testing Test.TXT"
+ 1241  git push origin Chris
+ 1242  git checkout main ./Test.TXT
+ 1243  git checkout main Test.TXT
+ 1244  git checkout main Chris/Test.TXT
+ 1245  git checkout main Chris\Test.TXT
+ 1246  git checkout main origin/Chris/Test.TXT
+ 1247  git checkout orgin/main origin/Chris/Test.TXT
+ 1248  git checkout --help
+ 1249  git checkout main Test.TXT
+ 1250  git checkout -t main Test.TXT
+ 1251  git checkout -t origin/main Test.TXT
+ 1252  git checkout origin/main Test.TXT
+ 1253  git commit --help
+ 1254  git status
+ 1255  git status --help
+ 1256  git status -b
+ 1257  git status -b -v
+ 1258  git show --help
+ 1259  git show
+ 1260  git show TREEISH
+ 1261  git show TREEISH:Test.txt
+ 1262  git show Test.TXT > main:Test.Txt
+ 1263  git checkout main
+ 1264  git add Test.txt
+ 1265  git status
+ 1266  git checkout main
+ 1267  git commit -m "Added 2nd Test"
+ 1268  git checkout main
+ 1269  git restore --source Chris Test.TXT
+ 1270  git restore --source Chris Test.txt
+ 1271  git restore --source Chris Test.txtsdfgsdfg
+ 1272  git log
+ 1273  git restore --help
+ 1274  git fetch
+ 1275  git pull
+ 1276  git restore --source Chris "client/components/Search Bar", "server/Login"
+ 1277  git restore --source Chris "client/components/Search", "server/Login"
+ 1278  git checkout Chris
+ 1279  git add -A
+ 1280  git commit -m "Test merge commit"
+ 1281  git push origin main
+ 1282  git checkout Chris
+ 1283  git checkout main
+ 1284  git status
+ 1285  git restore --source Chris "client/components/Search", "server/Login"
+ 1286  git restore --source Chris "client/components/Search", "server/Search Service"
+ 1287  git restore --source Chris "client/components/Search Bar", "server/User", "server/Search Service"
+ 1288  git restore --source Chris "client/components/Search Bar" "server/User" "server/Search Service"
+ 1289  git commit -a -m "Test push Chris Branch (3 dirs)"
+ 1290  git status
+ 1291  git diff --cached
+ 1292  git add -A
+ 1293  git commit -a -m "Test push Chris Branch (3 dirs)"
+ 1294  git diff --cached
+ 1295  git diff
+ 1296  touch Test.bad
+ 1297  git diff
+ 1298  git diff --cached
+ 1299  git diff HEAD
+ 1300  git status
+ 1301  git status -v
+ 1302  git status -v -v
+ 1303  git status -vv
+ 1304  git status -a
+ 1305  git status -v -b
+ 1306  git status -v -b --show-stash
+ 1307  git status --show-stash
+ 1308  git diff --staged
+ 1309  git difftool -y --staged
+ 1310  git diff --name-only --cached
+ 1311  git status -v
+ 1312  git add Test.bad
+ 1313  git status -v
+ 1314  git log origin/master..HEAD
+ 1315  clear
+ 1316  git diff origin/master..HEAD
+ 1317  clear
+ 1318  git log --branches --not --remotes
+ 1319  git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
+ 1320  git log @{u}..;
+ 1321  git cherry -v
+ 1322  git cherry
+ 1323  git log origin/master..
+ 1324  clear
+ 1325  (git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline
+ 1326  git reflog
+ 1327  gitk
+ 1328  git branch -v
+ 1329  git unpushed
+ 1330  diff origin/$(git name-rev --name-only HEAD)..HEAD --name-status
+ 1331  git config --global alias.unpushed "diff origin/$(git name-rev --name-only HEAD)..HEAD --name-status"
+ 1332  git unpushed
+ 1333  git push
+ 1334  git status
+ 1335  git unpushed
+ 1336  ls
+ 1337  git log
+ 1338  code ~
+ 1339  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+ 1340  git branch
+ 1341  2>
+ 1342  git branch 2>
+ 1343  git branch 2> /dev/null
+ 1344  ls /dev/null
+ 1345  ls -la /dev/null
+ 1346  cat /dev/null
+ 1347  git branch 2> /dev/null | sed -e '/^[^*]/d'
+ 1348  sed
+ 1349  git branch
+ 1350  git log --help
+ 1351  git log
+ 1352  git branch
+ 1353  git branch --help
+ 1354  git log
+ 1355  CD g
+ 1356  LS
+ 1357  ls
+ 1358  llsdfffffDDDDDDgfgg
+ 1359  ;d
+ 1360  ls
+ 1361  cd GitHub_WSL/
+ 1362  ls
+ 1363  cd mcsp-fce/
+ 1364  ;sd
+ 1365  clear
+ 1366  ls
+ 1367  git branch
+ 1368  git branch --help
+ 1369  git switch --help
+ 1370  git switch -m -c Chris
+ 1371  git branch
+ 1372  git branch --help
+ 1373  git branch -r master
+ 1374  git branch --help
+ 1375  git branch -r -d master
+ 1376  git branch
+ 1377  git branch -d master
+ 1378  git branch
+ 1379  git remote -v
+ 1380  git cherry -v
+ 1381  git diff
+ 1382  git diff main
+ 1383  git branch -vv
+ 1384  git remote show origin
+ 1385  ls
+ 1386  pwd
+ 1387  git add -A
+ 1388  git commit -m "Test Commit to Chris Branch"
+ 1389  git push origin Chris
+ 1390  git remote -v
+ 1391  git remote show origin
+ 1392  git branch -vv
+ 1393  git status -sb
+ 1394  git status
+ 1395  git remote -av
+ 1396  git branch -av
+ 1397  git branch --show-current
+ 1398  ls -la
+ 1399  ifconfig
+ 1400  npm -v
+ 1401  git branch -vv
+ 1402  git branch -a
+ 1403  git switch --help
+ 1404  git switch -v
+ 1405  git switch --version
+ 1406  git version
+ 1407  git rename --help
+ 1408  git branch rename --help
+ 1409  git branch --help
+ 1410  ls
+ 1411  cd GitHub_WSL/
+ 1412  ls
+ 1413  cd mcsp-fce/
+ 1414  ls
+ 1415  cd server/
+ 1416  cd db/
+ 1417  ls
+ 1418  sudo service postgresql starft
+ 1419  sudo service postgresql start
+ 1420  plistdb
+ 1421  listdb
+ 1422  psql -l
+ 1423  createdb Ebay
+ 1424  ls
+ 1425  rm user_db_schema_seed.sql\:Zone.Identifier
+ 1426  ls
+ 1427  cd ..
+ 1428  ls
+ 1429  cd User/
+ 1430  ls
+ 1431  psql -f user_db_schema_seed.sql Ebay
+ 1432  cd ../Search\ Service/
+ 1433  ls
+ 1434  psql -f search_history_db_schema.sql Ebay
+ 1435  psql -f search_history_db_seed.sql Ebay
+ 1436  psql Ebay
+ 1437  ls
+ 1438  exit
+ 1439  ls
+ 1440  node LinkedListReverse.js
+ 1441  clear
+ 1442  node LinkedListReverse.js
+ 1443  clear
+ 1444  node LinkedListReverse.js
+ 1445  clear
+ 1446  node LinkedListReverse.js
+ 1447  clear
+ 1448  node LinkedListReverse.js
+ 1449  clear
+ 1450  node LinkedListReverse.js
+ 1451  clear
+ 1452  node LinkedListReverse.js
+ 1453  clear
+ 1454  node LinkedListReverse.js
+ 1455  clear
+ 1456  node LinkedListReverse.js
+ 1457  clear
+ 1458  node LinkedListReverse.js
+ 1459  clear
+ 1460  node LinkedListReverse.js
+ 1461  clear
+ 1462  node LinkedListReverse.js
+ 1463  clear
+ 1464  node LinkedListReverse.js
+ 1465  clear
+ 1466  node LinkedListReverse.js
+ 1467  clear
+ 1468  node LinkedListReverse.js
+ 1469  clear
+ 1470  node LinkedListReverse.js
+ 1471  clear
+ 1472  node LinkedListReverse.js
+ 1473  clear
+ 1474  node LinkedListReverse.js
+ 1475  clear
+ 1476  node LinkedListReverse.js
+ 1477  clear
+ 1478  node LinkedListReverse.js
+ 1479  node
+ 1480  clear
+ 1481  node LinkedListReverse.js
+ 1482  node
+ 1483  exit
+ 1484  node LinkedListReverse.js
+ 1485  exit
+ 1486  node LinkedListReverse.js
+ 1487  clear
+ 1488  node LinkedListReverse.js
+ 1489  clear
+ 1490  node LinkedListReverse.js
+ 1491  clear
+ 1492  node LinkedListReverse.js
+ 1493  clear
+ 1494  node LinkedListReverse.js
+ 1495  clear
+ 1496  node LinkedListReverse.js
+ 1497  clear
+ 1498  node LinkedListReverse.js
+ 1499  clear
+ 1500  node LinkedListReverse.js
+ 1501  clear
+ 1502  node LinkedListReverse.js
+ 1503  clear
+ 1504  node LinkedListReverse.js
+ 1505  clear
+ 1506  node LinkedListReverse.js
+ 1507  clear
+ 1508  node LinkedListReverse.js
+ 1509  node LinkedListReverse.js
+ 1510  ls
+ 1511  cd GitHub_WSL/
+ 1512  ls
+ 1513  cd Interview\ Problems/
+ 1514  ls
+ 1515  code .
+ 1516  ls
+ 1517  cd ..
+ 1518  ls
+ 1519  cd ..
+ 1520  ls
+ 1521  cd GitHub_WSL/
+ 1522  ls
+ 1523  cd mcsp-fce/
+ 1524  ls
+ 1525  git log
+ 1526  clear
+ 1527  git diff
+ 1528  git fetch --help
+ 1529  git fetch origin
+ 1530  clear
+ 1531  git diff --help
+ 1532  git branch
+ 1533  git diff HEAD
+ 1534  git checkout -b Chris origin/Chris
+ 1535  git merge main
+ 1536  git checkout main
+ 1537  git add -A
+ 1538  git commit -m "Monday sync commit"
+ 1539  git push origin Chris
+ 1540  git checkout main
+ 1541  git checkout Chris
+ 1542  git diff
+ 1543  git diff HEAD
+ 1544  git diff --help
+ 1545  git fetch
+ 1546  git fetch --help
+ 1547  git checkout main
+ 1548  git pull
+ 1549  git checkout Chris
+ 1550  git merge main
+ 1551  git mergetool
+ 1552  clear
+ 1553  git checkout main
+ 1554  git merge main
+ 1555  git log --short
+ 1556  git log --help
+ 1557  git log -v -a
+ 1558  git log HEAD
+ 1559  ls
+ 1560  ls -la
+ 1561  git branch
+ 1562  git log
+ 1563  code .
+ 1564  ls
+ 1565  cd GitHub_WSL/
+ 1566  ls
+ 1567  cd mcsp-fce/
+ 1568  ls
+ 1569  git unpushed
+ 1570  code .
+ 1571  git checkout main
+ 1572  git commit -m "Before big switch"
+ 1573  git add -A
+ 1574  git commit -m "Before big switch"
+ 1575  git push origin Chris
+ 1576  git checkout main
+ 1577  git pull origin intergration
+ 1578  git add -A
+ 1579  ls
+ 1580  pwd
+ 1581  ls -la
+ 1582  git add -A
+ 1583  git commit -m "Cleansed old main branch - Ready for intergration"
+ 1584  git push origin main
+ 1585  git pull
+ 1586  git add -A
+ 1587  git commit -m "Cleansed old main branch - Ready for intergration 2"
+ 1588  git push origin main
+ 1589  git checkout -b intergration
+ 1590  ls
+ 1591  git pull
+ 1592  git pull origin intergration
+ 1593  git pull origin integration
+ 1594  git checkout main
+ 1595  git merge main
+ 1596  git add -A
+ 1597  git status
+ 1598  get merge main
+ 1599  git merge main
+ 1600  git checkout main
+ 1601  git merge itegration
+ 1602  git merge
+ 1603  git add -A
+ 1604  git commit -m "Cleansed old main branch - Ready for intergration 3"
+ 1605  git push origin main
+ 1606  git add -A
+ 1607  git commit -m "Manual copy of integration branch"
+ 1608  git push origin main
+ 1609  ls
+ 1610  git add -A
+ 1611  git commit -m "Removed identifiers"
+ 1612  git push origin main
+ 1613  git checkout Chris
+ 1614  git merge main
+ 1615  git fetch
+ 1616  git merge origin main
+ 1617  ls
+ 1618  git status
+ 1619  git add -A
+ 1620  git merge main
+ 1621  git commit -m "Old Files"
+ 1622  git merge main
+ 1623  git status
+ 1624  git unpushed
+ 1625  ls
+ 1626  git merge origin main
+ 1627  git checkout main
+ 1628  ls
+ 1629  git status
+ 1630  git checkout Chris
+ 1631  git merge main
+ 1632  git status
+ 1633  git merge main
+ 1634  git status
+ 1635  git add -A
+ 1636  git commit -m "New itegration structure."
+ 1637  git push origin Chris
+ 1638  git status
+ 1639  git merge main
+ 1640  git add -A
+ 1641  git commit -m "Removed identifier files."
+ 1642  git push origin Chris
+ 1643  git add -A
+ 1644  git status
+ 1645  git commit -m "Attempting removal of node_modules"
+ 1646  git push origin Chris
+ 1647  git status
+ 1648  git unpushed
+ 1649  code .
+ 1650  git add -A
+ 1651  git commit -m "Modified .gitignore to reduce future commit overhead."
+ 1652  git status
+ 1653  git unpushed
+ 1654  git push origin Chris
+ 1655  git fetch
+ 1656  git push origin Chris
+ 1657  git pull
+ 1658  git pull origin Chris
+ 1659  npm install
+ 1660  git add -A
+ 1661  git status
+ 1662  git commit -m "Modified .gitignore to reduce future commit overhead 2."
+ 1663  git push origin Chris
+ 1664  code .
+ 1665  git rm --help
+ 1666  find
+ 1667  find *.js
+ 1668  clear
+ 1669  git ls-files *.js
+ 1670  rm --help
+ 1671  ls **/*.js
+ 1672  ls
+ 1673  ifconfig
+ 1674  psql fec
+ 1675  git check-ignore -v
+ 1676  ls
+ 1677  cd GitHub_WSL/
+ 1678  lsd
+ 1679  ls
+ 1680  cd mcsp-fce/
+ 1681  git check-ignore -v
+ 1682  git check-ignore -v *
+ 1683  git check-ignore *
+ 1684  git check-ignore -v **/*
+ 1685  git check-ignore **/*
+ 1686  clear
+ 1687  git check-ignore -v **/*
+ 1688  clear
+ 1689  ls
+ 1690  git check-ignore -v **/*
+ 1691  git ls-files -i
+ 1692  git ls-files -i --exclude-from=.gitignore
+ 1693  clear
+ 1694  git ls-files -i --exclude-from=.gitignore
+ 1695  git ls-files -v -i --exclude-from=.gitignore
+ 1696  clear
+ 1697  git ls-files -v -i --exclude-from=.gitignore
+ 1698  git status --ignored
+ 1699  git clean -ndX
+ 1700  git ls-files -v -i --exclude-from=.gitignore
+ 1701  git ls-files --help
+ 1702  git ls-files -v -i --exclude-from=.gitignore
+ 1703  git ls-files -v -i -d --exclude-from=.gitignore
+ 1704  git ls-files -v -d -i --exclude-from=.gitignore
+ 1705  git ls-files -v -D -i --exclude-from=.gitignore
+ 1706  git ls-files -v --directories -i --exclude-from=.gitignore
+ 1707  git ls-files -v --directory -i --exclude-from=.gitignore
+ 1708  git clean -ndX
+ 1709  git remote -v
+ 1710  git status
+ 1711  git checkout --help
+ 1712  clear
+ 1713  git add -A
+ 1714  git status
+ 1715  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1716  git unpushed
+ 1717  git status
+ 1718  git add -A
+ 1719  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1720  git unpushed
+ 1721  git status
+ 1722  git add -A
+ 1723  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1724  git unpushed
+ 1725  git reset HEAD
+ 1726  git unpushed
+ 1727  git reset
+ 1728  git unpushed
+ 1729  git add -A
+ 1730  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1731  git reset
+ 1732  git reset --help
+ 1733  git add -A
+ 1734  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1735  git unpushed
+ 1736  git status
+ 1737  git add -A
+ 1738  git clean -ndX
+ 1739  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1740  git unpushed
+ 1741  git add -A
+ 1742  git commit -m "Fixed Search Bar component and Service; Corrected API routes/paths"
+ 1743  git status
+ 1744  git push origin Chris
+ 1745  git checkout main
+ 1746  git pull
+ 1747  git checkout Chris
+ 1748  git merge main
+ 1749  git status
+ 1750  git add client/components/App.js
+ 1751  git status
+ 1752  git merge main
+ 1753  git add -A
+ 1754  git commit -m "Synced with Jose's latest pull to main branch"
+ 1755  git status
+ 1756  git unpushed
+ 1757  git merge main
+ 1758  git push origin Chris
+ 1759  git add -A
+ 1760  git commit -m "Fixed App.js state and Jose's component"
+ 1761  git push origin Chris
+ 1762  git status
+ 1763  git checkout main
+ 1764  git pull
+ 1765  git checkout Chris
+ 1766  git merge main
+ 1767  alias --help
+ 1768  alias -p
+ 1769  npm dotenv -v
+ 1770  npm --help
+ 1771  npm update dotenv
+ 1772  ls
+ 1773  cd GitHub_WSL/
+ 1774  ls
+ 1775  cd mcsp-fce/
+ 1776  ls
+ 1777  git pull
+ 1778  git status
+ 1779  git checkout main
+ 1780  git commit -m "Stashing..."
+ 1781  git add -A
+ 1782  git commit -m "Stashing..."
+ 1783  git checkout main
+ 1784  git pull
+ 1785  ls
+ 1786  ls -la
+ 1787  git checkout Chris
+ 1788  git merge main
+ 1789  git status
+ 1790  ls -la
+ 1791  code .
+ 1792  ls -la
+ 1793  git merge main
+ 1794  git status
+ 1795  git add -A
+ 1796  git merge main
+ 1797  git commit -m "Stashing..."
+ 1798  git merge main
+ 1799  git log
+ 1800  git status
+ 1801  git unpushed
+ 1802  sudo service postgresql start
+ 1803  createdb fec
+ 1804  psql fec
+ 1805  npm run setup-db
+ 1806  npm setup-db
+ 1807  npm run setup-db
+ 1808  npm install
+ 1809  npm run setup-db
+ 1810  rm --help
+ 1811  rm -R node_modules/
+ 1812  npm install
+ 1813  npm audit fix
+ 1814  npm run setup-db
+ 1815  listdb
+ 1816  psql -l
+ 1817  clear
+ 1818  npm run setup-db
+ 1819  npm run start
+ 1820  npm --help
+ 1821  npmm start
+ 1822  npm start
+ 1823  clear
+ 1824  ls
+ 1825  ls -la
+ 1826  ls .vscode/
+ 1827  npm run start
+ 1828  npm run setup-db
+ 1829  npm run --workspaces
+ 1830  npm run setup-db --workspaces
+ 1831  npm run start --workspaces
+ 1832  git unpushed
+ 1833  clear
+ 1834  npm run setup-db
+ 1835  npm run -v
+ 1836  npm --help
+ 1837  sudo apt-get install npm
+ 1838  sudo apt-get update npm
+ 1839  sudo apt-get upgrade npm
+ 1840  npm run -v
+ 1841  npm install -g npm@latest
+ 1842  sudo npm install -g npm@latest
+ 1843  npm fund
+ 1844  npm status
+ 1845  npm -v
+ 1846  npm run setup-db
+ 1847  npm start
+ 1848  DATABASE_URL=postgres://toor:password@localhost:5432/fec npm start
+ 1849  ls
+ 1850  exit
+ 1851  ifconfig
+ 1852  sudo service postgresql start
+ 1853  psql -l
+ 1854  psql fec
+ 1855  pwd
+ 1856  cd GitHub_WSL/
+ 1857  ls
+ 1858  cd mcsp-fce/
+ 1859  ls
+ 1860  git status
+ 1861  npm run start
+ 1862  npm run start-wsl
+ 1863  ls
+ 1864  pwd
+ 1865  alias project=/home/toor/GitHub_WSL/mcsp-fce
+ 1866  project
+ 1867  cd projecct
+ 1868  cd project
+ 1869  alias project=cd /home/toor/GitHub_WSL/mcsp-fce
+ 1870  alias project="cd /home/toor/GitHub_WSL/mcsp-fce"
+ 1871  npm run start-wsl
+ 1872  pwd
+ 1873  ls
+ 1874  alias project="cd /home/toor/GitHub_WSL/mcsp-fce"
+ 1875  project
+ 1876  pwd
+ 1877  ls
+ 1878  git merge --help
+ 1879  git check-ignore -v *
+ 1880  git check-ignore --help
+ 1881  git check-ignore -v -directory *
+ 1882  git check-ignore -v --directory *
+ 1883  git ls-files -i
+ 1884  git check-ignore -v $(find . -type f -print)
+ 1885  git check-ignore -v $(find . -type f -print) > Test.txt
+ 1886  git status --ignored
+ 1887  git rm --cached
+ 1888  git rm --cached *.json
+ 1889  git status --ignored
+ 1890  git rm --cached *.*
+ 1891  git rm --cached .babel*
+ 1892  git status --ignored
+ 1893  git add -A
+ 1894  git add package.json
+ 1895  git add -f package.json
+ 1896  git commit -m "Modified Search component, add command in package.json for WSL"
+ 1897  git rm --cached *bundle*
+ 1898  git add -A
+ 1899  git add -f package.json
+ 1900  git commit -m "Modified Search component, add command in package.json for WSL"
+ 1901  git status
+ 1902  git unpushed
+ 1903  git push origin Chris
+ 1904  git merge main
+ 1905  git checkout main
+ 1906  git pull origin main
+ 1907  git checkout Chris
+ 1908  git merge main
+ 1909  git status
+ 1910  git push origin Chris
+ 1911  git status
+ 1912  git unpushed
+ 1913  git status
+ 1914  git commit -m "Merged with main."
+ 1915  git add -A
+ 1916  git commit -m "Merged with main."
+ 1917  git unpushed
+ 1918  git push origin Chris
+ 1919  ssh
+ 1920  ls
+ 1921  cd GitHub_WSL/
+ 1922  ls
+ 1923  ls -la
+ 1924  ls
+ 1925  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1926  chmod 400 Nguyen.pem
+ 1927  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1928  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1929  cd GitHub_WSL/
+ 1930  ls
+ 1931  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1932  http get
+ 1933  http --help
+ 1934  npm run start
+ 1935  project
+ 1936  alias
+ 1937  cd GitHub_WSL/
+ 1938  cd mcsp-f
+ 1939  cd mcsp-fce/
+ 1940  ;s
+ 1941  ls
+ 1942  git status
+ 1943  psql fec
+ 1944  ifconfig
+ 1945  psql --version
+ 1946  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1947  cd GitHub_WSL/
+ 1948  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1949  cd GitHub_WSL/
+ 1950  ls
+ 1951  ssh -i "Nguyen.pem" ec2-user@ec2-3-137-165-156.us-east-2.compute.amazonaws.com
+ 1952  ifconfig
+ 1953  http get localhost:4000
+ 1954  http get localhost:4000/api/history
+ 1955  psql -l
+ 1956  http get localhost:4000/api/search
+ 1957  http get localhost:4000/api/search/history
+ 1958  git add -A
+ 1959  git commit -m "Added Login/Logout options..."
+ 1960  git checkout main
+ 1961  git pull origin main
+ 1962  git checkout Chris
+ 1963  git merge main
+ 1964  git rm public/bundle.js
+ 1965  git rm Chris public/bundle.js
+ 1966  git rm public/bundle.js
+ 1967  rm public/bundle.js
+ 1968  git merge main
+ 1969  git status
+ 1970  git add -A
+ 1971  git commit -m "Fixed Login JSX and merged with 'main' "
+ 1972  git push origin Chris
+ 1973  npm run start
+ 1974  npm run setup-db
+ 1975  cd GitHub_WSL/mcsp-fce/
+ 1976  npm run start
+ 1977  lsof -n -i4TCP:4000
+ 1978  netstat -n -i4TCP:4000
+ 1979  services -n -i4TCP:4000
+ 1980  sudo apt-get lsof
+ 1981  sudo apt-get install lsof
+ 1982  lsof -n -i4TCP:4000
+ 1983  npm run start
+ 1984  npm install
+ 1985  git audit
+ 1986  npm audit
+ 1987  psql fec
+ 1988  npm run start-wsl
+ 1989  DATABASE_URL=postgres://toor:password@localhost:5432/fec npm run setup-db
+ 1990  npm run start-wsl
+ 1991  sudo npm run start-wsl
+ 1992  npm run start-wsl
+ 1993  cd GitHub_WSL/mcsp-fce/
+ 1994  ls
+ 1995  git unstash
+ 1996  git unstashed
+ 1997  git stash --help
+ 1998  cd GitHub_WSL/mcsp-fce/
+ 1999  ls
+ 2000  git stash show
+ 2001  git stash apply
+ 2002  git diff
+ 2003  ifconfig
+ 2004  psql fec
+ 2005  histsize
+ 2006  HISTSIZE
+ 2007  history > ../Logs/AllHistory.txt
