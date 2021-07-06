@@ -16,6 +16,7 @@ export default class SearchBar extends Component {
             search_results: null ,   // Template/mock data
             show_results: false
         }
+
     }
 
     getData(){
@@ -25,7 +26,6 @@ export default class SearchBar extends Component {
                 if(!data) this.setState({ history: data[0] })
             } );
     }
-
 
     updateCategory(e){
         this.setState({category:e.target.value})
@@ -94,7 +94,7 @@ export default class SearchBar extends Component {
                         </select>
                     </label>
 
-                    <input type="submit" value="Search" className="submit_action"   />
+                    <input type="submit" value="Search" className="submit_action"/>
                 </form>
 
                 {this.state.show_results && <ShowResults close={this.closeModal.bind(this)} updateItem={this.updateItem.bind(this)} result_items={this.state.search_results} /> }

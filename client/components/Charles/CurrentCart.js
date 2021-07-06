@@ -7,13 +7,14 @@ class CurrentCart extends React.Component {
         this.state = {
             
         }
+
+        
         
        
     }
 
-
     render () {
-        console.log('here is the props CurrentCart: ', this.props)
+
         return (
             <div className={"modal"}>
                 <div className={"currentCart"}>
