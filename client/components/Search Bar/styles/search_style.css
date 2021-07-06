@@ -1,5 +1,4 @@
 
-
 .results_modal {
     height: 100vh;
     width: 100vw;
@@ -60,4 +59,9 @@
     display: flex;
     width: 90%;
     height: 100%;
+}
+
+#history_options{
+    width: 20px;
+    background-color: blue;
 }
