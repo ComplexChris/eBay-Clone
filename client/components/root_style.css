@@ -27,7 +27,7 @@ footer {
 
 .root_header{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: flex-end;
     height: 30px;
     width: 45%;
@@ -57,8 +57,14 @@ footer {
 .header_img{
     cursor: pointer;
 }
+.header_img:hover {
+    content: url("https://cdns.iconmonstr.com/wp-content/assets/preview/2013/96/iconmonstr-shopping-cart-24.png")
+}
 .header_spacer{
     width: auto;
+}
+.tinyBox{
+    width:1px
 }
 
 .left-sidebar {

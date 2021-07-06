@@ -2,7 +2,6 @@ import React from 'react';
 import CurrentCart from './CurrentCart.js';
 import "./styles/styles.css";
 
-let previousCart = null;
 
  class AddToCart extends React.Component {
     constructor (props) {
@@ -38,7 +37,6 @@ let previousCart = null;
         fetch(`/api/cart/${this.props.user_id}`)
               .then((response) => response.json())
               .then((data) => {
-                  console.log(`get data by id:${this.props.user_id}`, data);
 
              return Promise.all(
                   data.map((cartItem)=>{
@@ -53,15 +51,16 @@ let previousCart = null;
 
 
 
-    clickEvent (e) {
+    clickEvent (e, add_item=true) {
         if(e.target !== e.currentTarget ){
             // Prevents event listener from bubbling/pagintating to other elements
             // Modal only closes if 2 events occured; The "x" or outside of modal was clicked
+            console.log("RETURNING")
             return
         }
         this.setState({currentCart:!this.state.currentCart}); // toggles modal
 
-        if(this.state.currentCart === false) {
+        if(this.state.currentCart === false && add_item==true) {
             this.setState((state)=>{
                 return (
                     {cartItems:state.cartItems.push(this.props.current_item_obj)},
@@ -73,32 +72,42 @@ let previousCart = null;
         }
       }
 
-      addToWatchList () {
-         this.setState({watchList:!this.state.watchList});
-          console.log('it worked')
-      }
-
-
 
     render () {
-
-        return (
-            <div className={"cartContainer"}>
-                {(this.state.currentCart || this.props.force_cart) && <CurrentCart
-                setCurrentItem={ this.props.setCurrentItem.bind(this) }
-                currentCart={this.clickEvent}
-                cartItems={this.state.cartItems}
-                sizeOfCart={Object.values(this.state.cartItems).length}
-                />}
-
-                <div className={'ecommerceCard'}>
-
-                    <button className={'addToCartBtn'} onClick={this.clickEvent}>Add to cart</button>
-
-
+        if(this.props.force_cart){
+            function modified_callBack(closeCart, e){
+                this.clickEvent(e, false)
+                closeCart()
+            }
+            return(
+                <div className={"cartContainerSpecial"}>
+                    {(!this.state.currentCart) && <CurrentCart
+                        setCurrentItem={ this.props.setCurrentItem.bind(this) }
+                        currentCart={modified_callBack.bind(this, this.props.closeCart.bind(this))}
+                        cartItems={this.state.cartItems}
+                        cartImgs={this.props.currentImagesObj}
+                        sizeOfCart={Object.values(this.state.cartItems).length}
+                    />}
                 </div>
-            </div>
-        );
+            )
+        }
+        else{
+            return (
+                <div className={"cartContainer"}>
+                    {(this.state.currentCart) && <CurrentCart
+                    setCurrentItem={ this.props.setCurrentItem.bind(this) }
+                    currentCart={this.clickEvent}
+                    cartItems={this.state.cartItems}
+                    cartImgs={this.props.currentImagesObj}
+                    sizeOfCart={Object.values(this.state.cartItems).length}
+                    />}
+
+                    <div className={'ecommerceCard'}>
+                        <button className={'addToCartBtn'} onClick={this.clickEvent}>Add to cart</button>
+                    </div>
+                </div>
+            );
+        }
     }
  }
 
