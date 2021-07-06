@@ -58,19 +58,22 @@ export default class SearchBar extends Component {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({search_string:this.state.search_input})
+            body: JSON.stringify({search_string:this.state.search_input, search_date: new Date().toUTCString() })
         }
-        fetch(`/api/items/search`, requestOptions)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Search came back: ", data)
-                this.setState(() => ({
-                    search_results: data.rows,
-                    show_results: (data.rows.length>0) ? true : (alert("No results found."), false)
-                }))
-            });
+        this.postSearch(`/api/items/search`, requestOptions, (data) => this.setState(() => ({
+                search_results: data.rows,
+                show_results: (data.rows.length>0) ? true : (alert("No results found."), false)
+            })
+            )
+        )
+        this.postSearch('/api/search/history', requestOptions, ()=>{} )
 
         e.preventDefault()
+    }
+    postSearch(url, requestOptions, callBack){
+        fetch(url, requestOptions)
+            .then((response) => response.json())
+            .then((data) => { callBack(data) });
     }
 
     render(){
@@ -79,6 +82,7 @@ export default class SearchBar extends Component {
 
         const json_res = [{"id":1,"name":"7up Diet, 355 Ml","category":"Garden","company":"Yost-Pollich","price":"$7.50"}]
         var repeated = [].concat(... new Array(10).fill(json_res));    // For seeding/testing purposes only
+        const cache = []
         return (
             <div className={'search_container'} >
 

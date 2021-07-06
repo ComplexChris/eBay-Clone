@@ -89,6 +89,7 @@ class App extends Component {
     console.log("Re-Rendered", this.state)
     if(this.state.current_item_obj==null){
       console.log("Unknown item/error. Attempting purge of state")
+      alert("Sorry, that product is currently sold out.")
       this.setUserID( this.state.user_id || 1 );
       return <div/>;    // Temporarily give empty page, then setState will re-render default page (Search item 71 for proof)
     }
