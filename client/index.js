@@ -6,7 +6,7 @@ const old_fetch = fetch;
 function fetch_special(data, requestOptions, port=4000){
     // Will return a promise
     const url = `http://${window.location.hostname}:${port}${data}`
-    console.log("URL: ", url);
+    //console.log("URL: ", url);
     return old_fetch( url , {...requestOptions} )
 }
 

@@ -32,9 +32,9 @@ export default class User extends Component {
         return (
             <span>
                 Hi!
-                <a href="#" onClick = {this.state.change_user.bind(this, 1) }>&ensp; Sign In &ensp; </a>
+                <a href="#" className={"header_button"} onClick = {this.state.change_user.bind(this, 1) }>&ensp; Sign In &ensp; </a>
                 or
-                <a href="#" onClick = {this.state.change_user.bind(this, 1) }>&ensp; Register &emsp; </a>
+                <a href="#" className={"header_button"} onClick = {this.state.change_user.bind(this, 1) }>&ensp; Register &emsp; </a>
             </span>
         )
     }
@@ -42,8 +42,8 @@ export default class User extends Component {
     welcomeJSX(){
         return (
             <span>
-                <a href="#" onClick = {this.getUserPage.bind(this)}>&ensp; Welcome back! &ensp; </a>
-                <a href="#" onClick = {this.state.change_user.bind(this, null) }>&ensp; Signout &emsp; </a>
+                <a href="#" className={"header_button"} onClick = {this.getUserPage.bind(this)}>&ensp; Welcome back! &ensp; </a>
+                <a href="#" className={"header_button"} onClick = {this.state.change_user.bind(this, null) }>&ensp; Signout &emsp; </a>
             </span>
 
         )

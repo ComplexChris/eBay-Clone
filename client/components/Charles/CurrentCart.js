@@ -5,26 +5,28 @@ class CurrentCart extends React.Component {
         super(props);
 
         this.state = {
-            
+
         }
-        
-       
+
+
     }
 
-    
-    
-    
+    navigate_item(item_id){
+        this.props.setCurrentItem( item_id );
+        this.props.currentCart()
+    }
+
+
     render () {
-        
         return (
-            <div className={"modal"}>
+            <div className={"modal"} onClick={this.props.currentCart} >
                 <div className={"currentCart"}>
                     <div className={'currentCartTitleBar'}>
-                        {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""} added to cart 
-                        
-                        <img 
-                            src="close.svg" 
-                            className={'closeBtn'} 
+                        {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""} added to cart
+
+                        <img
+                            src="close.svg"
+                            className={'closeBtn'}
                             onClick={this.props.currentCart}>
                         </img>
                     </div>
@@ -39,7 +41,7 @@ class CurrentCart extends React.Component {
                                         <img src="placeholder.jpeg" height="75" width="75"></img>
                                     </div>
                                     <div className={"itemSpecifics"}>
-                                        <div className={"itemSpecificsTitle"}>{item.name}</div>
+                                        <div onClick={ this.navigate_item.bind(this, item.id) } className={"itemSpecificsTitle"}>{item.name}</div>
                                         <div className={"itemSpecificsPrice"}>
                                             <div className={"itemPriceText"}>Price</div>
                                             <div className={"itemDollarAmt"}>US {item.price}</div>
@@ -51,12 +53,12 @@ class CurrentCart extends React.Component {
 
                         </div>
 
-                        <button className={"checkoutBtn"}>  
+                        <button className={"checkoutBtn"}>
                         Checkout {this.props.sizeOfCart} item{this.props.sizeOfCart > 1 ? "s" : ""}
                         </button>
                         <button className={"goToCartBtn"}>Go to cart</button>
                     </div>
-                    
+
                 </div>
             </div>
         );

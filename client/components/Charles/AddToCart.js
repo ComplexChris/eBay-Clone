@@ -53,8 +53,12 @@ let previousCart = null;
 
 
 
-    clickEvent () {
-
+    clickEvent (e) {
+        if(e.target !== e.currentTarget ){
+            // Prevents event listener from bubbling/pagintating to other elements
+            // Modal only closes if 2 events occured; The "x" or outside of modal was clicked
+            return
+        }
         this.setState({currentCart:!this.state.currentCart}); // toggles modal
 
         if(this.state.currentCart === false) {
@@ -80,7 +84,8 @@ let previousCart = null;
 
         return (
             <div className={"cartContainer"}>
-                {this.state.currentCart && <CurrentCart
+                {(this.state.currentCart || this.props.force_cart) && <CurrentCart
+                setCurrentItem={ this.props.setCurrentItem.bind(this) }
                 currentCart={this.clickEvent}
                 cartItems={this.state.cartItems}
                 sizeOfCart={Object.values(this.state.cartItems).length}
