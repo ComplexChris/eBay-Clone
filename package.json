@@ -6,7 +6,8 @@
     "start:app": "npm run backend & npm run frontend",
     "start": "concurrently \"npm run start:app\" \"npm run start --workspace=cart\" \"npm run start --workspace=items\" \"npm run start --workspace=search\" \"npm run start --workspace=user\" \"npm run start --workspace=item-images\" ",
     "setup-db": "npm run setup-db --workspaces",
-    "start-wsl": "DATABASE_URL=postgres://toor:password@localhost:5432/fec npm run start"
+    "start-wsl": "DATABASE_URL=postgres://toor:password@localhost:5432/fec npm run start",
+    "test": "jest"
   },
   "license": "ISC",
   "workspaces": [
@@ -19,6 +20,7 @@
     "babel-loader": "^8.0.6",
     "concurrently": "^6.2.0",
     "css-loader": "^2.1.1",
+    "jest": "^27.0.6",
     "nodemon": "^2.0.7",
     "style-loader": "^0.23.1",
     "webpack": "^4.32.2",
@@ -31,5 +33,8 @@
     "pg": "^8.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   }
 }
