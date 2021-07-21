@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS items;
 create table items (
-	id INT,
+	id SERIAL,
 	name VARCHAR(50),
 	description TEXT,
 	model VARCHAR(50),
